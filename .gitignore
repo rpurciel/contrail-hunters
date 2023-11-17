@@ -2,3 +2,5 @@
 data/*
 plots/*
 logs/*
+tests/*
+.DS_Store
