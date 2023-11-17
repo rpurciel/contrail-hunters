@@ -67,6 +67,7 @@ DEF_UNITS = 'ft'
 
 DEF_GRIDLINES_VISIBLE = True
 DEF_GRIDLINES_WIDTH = 8
+DEF_GRIDLINES_STYLE = "--"
 DEF_GRIDLINES_LABEL_VISIBLE = True
 DEF_GRIDLINES_LABEL_SIZE = 7
 
@@ -191,8 +192,8 @@ DEF_PLOT_BRANDING = "ContrailHunters®"
 # DEF_PLOT_DESC = f"Init: {init_time}   Forecast Hr: [{forecast_hour}]   Valid: {valid_time}"
 
 DEF_LOGO_SIZE_PIX = 500
-DEF_LOGO_MARGIN_X = -150
-DEF_LOGO_MARGIN_Y = -50
+DEF_LOGO_MARGIN_X = -240
+DEF_LOGO_MARGIN_Y = -550
 DEF_LOGO_ALPHA = 0.8
 
 #######################################################
@@ -202,7 +203,7 @@ DEF_LOGO_ALPHA = 0.8
 #######################################################
 
 DEF_FILE_DPI = 300
-DEF_FILE_NAMING_SCHEME = "GFS_Contrail_Heights_{region_name}_{valid_time_str}"
+DEF_FILE_NAMING_SCHEME = "'GFS_Contrail_Heights_{0:}_{1:}'.format(region_name, valid_time_str)"
 
 #######################################################
 ###                                                 ###
@@ -224,8 +225,8 @@ DEF_DEBUG_MODE = False
 DEBUG_MODE = False
 VERBOSE_MODE = True
 
-DEBUG_USE_STATIC_FILES = False
-DEBUG_STATIC_FILE_PATH = "/Users/rpurciel/Development/contrail-hunters/src/contrailhunters/data/gfs/20231106"
+DEBUG_USE_STATIC_FILES = True
+DEBUG_STATIC_FILE_PATH = "/Users/rpurciel/Development/contrail-hunters/data/gfs/20231116"
 
 DEBUG_LOG_TO_STDOUT = True
 DEBUG_LOGGING_LEVEL = "logging.DEBUG"

@@ -43,7 +43,7 @@ DEF_PLOT_BRANDING = "ContrailHunters®"
 DEF_FILE_DPI = 300
 
 log = logging.getLogger("proc")
-log_format = logging.Formatter("[%(name)s:%(asctime)s:%(filename)s:%(lineno)s:%(levelname)s] %(message)s",
+log_format = logging.Formatter("[%(asctime)s:%(filename)s:%(lineno)s]%(levelname)s:%(message)s",
                                datefmt="%Y-%m-%d %H:%M:%S %Z",)
 if cfg.DEBUG_LOG_TO_STDOUT:
     log_channel = logging.StreamHandler(stream=sys.stdout)
@@ -61,6 +61,7 @@ def calculate_contrail_heights(data_file_path):
                                 backend_kwargs={'filter_by_keys':{'typeOfLevel': 'isobaricInhPa'},'errors':'ignore'})                         
     except:
         log.fatal("FATAL: could not open dataset")
+        raise RuntimeError("Could not open dataset")
     else:
         log.info("Successfully opened data file")
 
@@ -257,23 +258,18 @@ def plot_region(save_dir, Calculation, region_id, **kwargs):
     if cfg.DEF_GEOG_VISIBLE:
         if cfg.DEF_GEOG_DRAW_STATES:
             ax.add_feature(crs.cartopy.feature.STATES, zorder=10)
-            if verbose: 
-                print("GEOG: Drawing states")
+            log.debug("Drawing states")
         if cfg.DEF_GEOG_DRAW_COASTLINES:
             ax.coastlines('50m', linewidth=1.5, color='k', alpha=.7, zorder=10)
-            if verbose:
-                print("GEOG: Drawing coastlines")
+            log.debug("Drawing coastlines")
         if cfg.DEF_GEOG_DRAW_BORDERS:
             ax.add_feature(cfeat.BORDERS, linewidth=1.5, color='k', alpha=.7, zorder=10)
-            if verbose:
-                print("GEOG: Drawing borders")
+            log.debug("Drawing borders")
         if cfg.DEF_GEOG_DRAW_WATER:
             ax.add_feature(cfeature.LAKES.with_scale('10m'),linestyle='-',linewidth=0.5,alpha=1,edgecolor='blue',facecolor='none', zorder=10)
-            if verbose:
-                print("GEOG: Drawing water")
+            log.debug("Drawing water")
     else:
-        if verbose:
-            print("GEOG: Geography drawing turned OFF")
+        log.debug("Geography drawing turned OFF")
 
     # # Master city file
     # master_city_list = pd.read_csv(os.path.join(ancillary_path, "LargeCities.csv"), sep=',', header=0)
@@ -323,30 +319,33 @@ def plot_region(save_dir, Calculation, region_id, **kwargs):
     ttl_valid_str = valid_time.strftime("%H:00 UTC %b %d %Y")
     plot_title = r"$\bf{"+"GFS\ Minimum\ Contrail\ Heights\ (ft\ &\ m\ MSL)"+"}$"+"\nInit: "+ttl_init_str+"   Forecast Hr: ["+fcasthr+"]   Valid: "+ttl_valid_str
     ax.set_title(plot_title, loc='left', fontsize = 13)
-    ax.set_title(cfg.DEF_PLOT_BRANDING, color='gray', fontweight='bold', 
+    ax.set_title(cfg.DEF_PLOT_BRANDING + "\n", color='gray', fontweight='bold', 
                  fontsize=13, loc='right')
 
     if cfg.DEF_COLORBAR_VISIBLE:
         if cfg.DEF_COLORBAR_LOCATION == 'inside':
             cb = fig.colorbar(contrail_heights_plotted, orientation = "horizontal", shrink=cfg.DEF_COLORBAR_SHRINK_FACT, aspect=22, 
                               pad=-.15, extendfrac=.02, format=cfg.DEF_COLORBAR_TICK_LABEL_FORMAT)
-            if verbose:
-                print(f"COLORBAR: Drawing colorbar turned ON\nCOLORBAR: Location = Inside plot\nCOLORBAR: Tick Label Format = '{cfg.DEF_COLORBAR_TICK_LABEL_FORMAT}'")
+            log.debug("Drawing colorbar turned ON")
+            log.debug("Location = Inside plot")
+            log.debug(f"Tick Label Format = '{cfg.DEF_COLORBAR_TICK_LABEL_FORMAT}'")
         if cfg.DEF_COLORBAR_LOCATION == 'bottom':
             cb = fig.colorbar(contrail_heights_plotted, orientation = "horizontal", shrink=cfg.DEF_COLORBAR_SHRINK_FACT, aspect=22, 
                               pad=.01, extendfrac=.02, format=cfg.DEF_COLORBAR_TICK_LABEL_FORMAT)
-            if verbose:
-                print(f"COLORBAR: Drawing colorbar turned ON\nCOLORBAR: Location = Bottom of plot\nCOLORBAR: Tick Label Format = '{cfg.DEF_COLORBAR_TICK_LABEL_FORMAT}'")
+            log.debug("Drawing colorbar turned ON")
+            log.debug("Location = Bottom of plot")
+            log.debug(f"Tick Label Format = '{cfg.DEF_COLORBAR_TICK_LABEL_FORMAT}'")
         if cfg.DEF_COLORBAR_LOCATION == 'right':
             cb = fig.colorbar(contrail_heights_plotted, orientation = "vertical", shrink=cfg.DEF_COLORBAR_SHRINK_FACT, aspect=22, 
                               pad=.01, extendfrac=.02, format=cfg.DEF_COLORBAR_TICK_LABEL_FORMAT)
-            if verbose:
-                print(f"COLORBAR: Drawing colorbar turned ON\nCOLORBAR: Location = Left of plot\nCOLORBAR: Tick Label Format = '{cfg.DEF_COLORBAR_TICK_LABEL_FORMAT}'")
+            log.debug("Drawing colorbar turned ON")
+            log.debug("Location = Left of plot")
+            log.debug(f"Tick Label Format = '{cfg.DEF_COLORBAR_TICK_LABEL_FORMAT}'")
 
         if cfg.DEF_COLORBAR_LABEL_VISIBLE:
             cb.set_label(cfg.DEF_COLORBAR_LABEL)
-            if verbose:
-                print(f"COLORBAR: Colorbar label turned ON\nCOLORBAR: Label = '{cfg.DEF_COLORBAR_LABEL}'")
+            log.debug("Colorbar label turned ON")
+            log.debug(f"Label = '{cfg.DEF_COLORBAR_LABEL}'")
     
     # Add logo to corner
     cwd = os.getcwd()
@@ -354,6 +353,7 @@ def plot_region(save_dir, Calculation, region_id, **kwargs):
     logo_sized = f"logo{cfg.DEF_LOGO_SIZE_PIX}.png"
     logo = os.path.join(ancillary_dir, logo_sized)
     img = Image.open(logo)
+    # ax.imshow(img, extent=(0.4, 0.6, 5, 5), zorder=15, alpha=cfg.DEF_LOGO_ALPHA)
     fig.figimage(img, xo=ax.bbox.xmin + cfg.DEF_LOGO_MARGIN_X, yo=ax.bbox.ymin + cfg.DEF_LOGO_MARGIN_X, zorder=15, alpha=cfg.DEF_LOGO_ALPHA)
 
     region_name = region_name.replace(" ", "").upper()
@@ -365,14 +365,14 @@ def plot_region(save_dir, Calculation, region_id, **kwargs):
         os.makedirs(save_dir)
 
     dest_path = os.path.join(save_dir, file_name + ".png")
-    
-    file_dpi = DEF_FILE_DPI
-    for arg, value in kwargs.items():
-        if arg == "file_dpi":
-            file_dpi = int(arg)
 
-    plt.savefig(dest_path, bbox_inches="tight", dpi=cfg.DEF_FILE_DPI)
-    plt.close()
+    try:
+        plt.savefig(dest_path, bbox_inches="tight", dpi=cfg.DEF_FILE_DPI)
+    except:
+        raise RuntimeError("Could not save file")
+    else:
+        log.info(f"Sucessfully saved plot file to {dest_path}")
+        plt.close()
 
     # buf = io.BytesIO()
     # plt.close()

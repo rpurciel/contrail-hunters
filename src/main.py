@@ -23,7 +23,7 @@ if __name__ == "__main__":
 	start_all_tasks = datetime.now()
 
 	log = logging.getLogger("main")
-	log_format = logging.Formatter("[%(name)s:%(asctime)s:%(filename)s:%(lineno)s:%(levelname)s] %(message)s",
+	log_format = logging.Formatter("[%(asctime)s:%(filename)s:%(lineno)s]%(levelname)s:%(message)s",
 	                               datefmt="%Y-%m-%d %H:%M:%S %Z",)
 	if cfg.DEBUG_LOG_TO_STDOUT:
 		log_channel = logging.StreamHandler(stream=sys.stdout)
@@ -49,7 +49,7 @@ if __name__ == "__main__":
 	cwd = os.path.dirname(srcdir)
 	print(cwd)
 
-	data_dir = os.path.join(cwd, cfg.DEF_DATA_DIR_NAME, date_dir_str)
+	data_dir = os.path.join(cwd, cfg.DEF_DATA_DIR_NAME, date_dir_str, str(hour).zfill(2))
 	if not os.path.exists(data_dir):
 		try:
 			os.makedirs(data_dir)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 	if util.clean_idx(data_dir):
 		log.info(f"Old .idx files removed from data dir")
 
-	plot_dir = os.path.join(cwd, cfg.DEF_PLOT_DIR_NAME, date_dir_str)
+	plot_dir = os.path.join(cwd, cfg.DEF_PLOT_DIR_NAME, date_dir_str, str(hour).zfill(2))
 	if not os.path.exists(plot_dir):
 		try:
 			os.makedirs(plot_dir)
@@ -111,7 +111,7 @@ if __name__ == "__main__":
 		try:
 			result, calc_time = cth.calculate_contrail_heights(file)
 		except Exception as e:
-			log.fatal(f"FATAL: Contrail heights could not be calculated for {file}. Reason:")
+			log.fatal(f"Contrail heights could not be calculated for {file}. Reason:")
 		else:
 			log.info(f"Success, took {calc_time} seconds")
 
@@ -120,7 +120,7 @@ if __name__ == "__main__":
 			try:
 				plot_time = cth.plot_region(plot_dir, result, region)
 			except Exception as e:
-				log.fatal(F"FATAL:Critical plotting error: {e}. Region {region} not plotted")
+				log.fatal(F"Critical plotting error: {e}. Region {region} not plotted")
 			else:
 				log.info(f"Success, took {plot_time} seconds")
 
