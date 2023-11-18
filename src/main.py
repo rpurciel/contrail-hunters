@@ -6,17 +6,17 @@ import logging
 
 import pandas as pd
 
-########## FOR TESTING ONLY, REMOVE ON PACKAGING ################
-sys.path.insert(0, '/Users/ryanpurciel/Development/contrail-hunters') 
-sys.path.insert(0, '/Users/rpurciel/Development/contrail-hunters')
-sys.path.insert(0, '/Users/ryanpurciel/Development/wexlib/src') 
-sys.path.insert(0, '/Users/rpurciel/Development/wexlib/src')
-########## FOR TESTING ONLY, REMOVE ON PACKAGING ################
+# ########## FOR TESTING ONLY, REMOVE ON PACKAGING ################
+# sys.path.insert(0, '/Users/ryanpurciel/Development/contrail-hunters') 
+# sys.path.insert(0, '/Users/rpurciel/Development/contrail-hunters')
+# sys.path.insert(0, '/Users/ryanpurciel/Development/wexlib/src') 
+# sys.path.insert(0, '/Users/rpurciel/Development/wexlib/src')
+# ########## FOR TESTING ONLY, REMOVE ON PACKAGING ################
 
-import wexlib.model.gfs as gfs
-import wexlib.util.internal as util
-import src.processor as cth
-import src.config as cfg
+import gfs as gfs
+import internal as util
+import processor as cth
+import config as cfg
 
 if __name__ == "__main__":
 

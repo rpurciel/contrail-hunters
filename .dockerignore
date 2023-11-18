@@ -1,0 +1,39 @@
+#model files
+data/*
+plots/*
+logs/*
+tests/
+old/
+
+#mac files
+.DS_Store
+
+#python files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+#git files
+.gitignore
+.git
+
+#other
+TODO.md
+README.md

@@ -211,7 +211,7 @@ DEF_FILE_NAMING_SCHEME = "'GFS_Contrail_Heights_{0:}_{1:}'.format(region_name, v
 ###                                                 ###
 #######################################################
 
-DEF_ANCILLARY_DIR_NAME = "ancillary"
+DEF_ANCILLARY_DIR_NAME = "src/ancillary"
 
 DEF_VERBOSE = True
 DEF_DEBUG_MODE = False
@@ -225,7 +225,7 @@ DEF_DEBUG_MODE = False
 DEBUG_MODE = False
 VERBOSE_MODE = True
 
-DEBUG_USE_STATIC_FILES = True
+DEBUG_USE_STATIC_FILES = False
 DEBUG_STATIC_FILE_PATH = "/Users/rpurciel/Development/contrail-hunters/data/gfs/20231116"
 
 DEBUG_LOG_TO_STDOUT = True

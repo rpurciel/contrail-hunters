@@ -25,8 +25,8 @@ import metpy
 from metpy.units import units
 from PIL import Image
 
-import wexlib.util.internal as internal
-import src.config as cfg
+import internal as internal
+import config as cfg
 
 warnings.filterwarnings('ignore')
 
@@ -59,9 +59,9 @@ def calculate_contrail_heights(data_file_path):
     try:
         data = xr.open_dataset(data_file_path, engine='cfgrib', 
                                 backend_kwargs={'filter_by_keys':{'typeOfLevel': 'isobaricInhPa'},'errors':'ignore'})                         
-    except:
-        log.fatal("FATAL: could not open dataset")
-        raise RuntimeError("Could not open dataset")
+    except Exception as e:
+        log.fatal("Could not open dataset")
+        raise e
     else:
         log.info("Successfully opened data file")
 
