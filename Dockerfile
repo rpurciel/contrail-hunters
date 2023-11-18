@@ -3,7 +3,7 @@
 FROM continuumio/miniconda3:latest
 WORKDIR /usr/src/contrail-hunters
 ENV PATH="${PATH}:/usr/src/contrail-hunters"
-VOLUME /plots
+VOLUME /usr/src/plots
 
 RUN apt-get update --assume-yes
 RUN apt-get install libgeos-dev --assume-yes
@@ -16,5 +16,3 @@ COPY . .
 
 #CMD [ "./test.sh"]
 ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "contrail-hunters", "python", "src/main.py"]
-
-EXPOSE 3000

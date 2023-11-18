@@ -48,8 +48,11 @@ if __name__ == "__main__":
 	srcdir = os.getcwd()
 	cwd = os.path.dirname(srcdir)
 	print(cwd)
+	if cfg.DEF_USE_DATES_IN_FILE_DIR:
+		data_dir = os.path.join(cwd, cfg.DEF_DATA_DIR_NAME, date_dir_str, str(hour).zfill(2))
+	else:
+		data_dir = os.path.join(cwd, cfg.DEF_DATA_DIR_NAME)
 
-	data_dir = os.path.join(cwd, cfg.DEF_DATA_DIR_NAME, date_dir_str, str(hour).zfill(2))
 	if not os.path.exists(data_dir):
 		try:
 			os.makedirs(data_dir)
@@ -63,7 +66,11 @@ if __name__ == "__main__":
 	if util.clean_idx(data_dir):
 		log.info(f"Old .idx files removed from data dir")
 
-	plot_dir = os.path.join(cwd, cfg.DEF_PLOT_DIR_NAME, date_dir_str, str(hour).zfill(2))
+	if cfg.DEF_USE_DATES_IN_FILE_DIR:
+		plot_dir = os.path.join(cwd, cfg.DEF_PLOT_DIR_NAME, date_dir_str, str(hour).zfill(2))
+	else:
+		plot_dir = os.path.join(cwd, cfg.DEF_PLOT_DIR_NAME)
+
 	if not os.path.exists(plot_dir):
 		try:
 			os.makedirs(plot_dir)

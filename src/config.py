@@ -49,6 +49,8 @@ DEF_PLOT_DIR_NAME = "plots"
 DEF_FALLBACK_DATA_DIR = "data/gfs"
 DEF_FALLBACK_PLOT_DIR = "plots"
 
+DEF_USE_DATES_IN_FILE_DIR = False
+
 DEF_FORECAST_HOURS = 24
 
 #######################################################
