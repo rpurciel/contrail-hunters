@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
 	srcdir = os.getcwd()
 	cwd = os.path.dirname(srcdir)
-	print(cwd)
+	#print(cwd)
 
 	data_dir = os.path.join(cwd, cfg.DEF_DATA_DIR_NAME, date_dir_str, str(hour).zfill(2))
 	if not os.path.exists(data_dir):
