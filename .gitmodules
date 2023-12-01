@@ -1,0 +1,3 @@
+[submodule "eccodes.git"]
+	path = eccodes
+	url = https://github.com/ecmwf/eccodes.git
