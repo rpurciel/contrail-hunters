@@ -25,7 +25,7 @@ import metpy
 from metpy.units import units
 from PIL import Image
 
-import wexlib.util.internal as internal
+import util as internal
 import config as cfg
 
 warnings.filterwarnings('ignore')
