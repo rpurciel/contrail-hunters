@@ -203,7 +203,11 @@ DEF_LOGO_ALPHA = 0.8
 #######################################################
 
 DEF_FILE_DPI = 300
-DEF_FILE_NAMING_SCHEME = "'GFS_Contrail_Heights_{0:}_{1:}'.format(region_name, valid_time_str)"
+DEF_FILE_NAMING_SCHEME = "'GFS_Contrail_Heights_{0:}_{1:}'.format(valid_time_str, region_name)"
+
+DEF_DELETE_DATA_AFTER_USE = True
+
+DEF_KEEP_FILES_HOURS = 72
 
 #######################################################
 ###                                                 ###
@@ -226,7 +230,7 @@ DEBUG_MODE = False
 VERBOSE_MODE = True
 
 DEBUG_USE_STATIC_FILES = False
-DEBUG_STATIC_FILE_PATH = "/Users/rpurciel/Development/contrail-hunters/data/gfs/20231116"
+DEBUG_STATIC_FILE_PATH = "/Users/rpurciel/Development/contrail-hunters/data/gfs/20231201/00"
 
 DEBUG_LOG_TO_STDOUT = True
 DEBUG_LOGGING_LEVEL = "logging.DEBUG"
