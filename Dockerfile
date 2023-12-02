@@ -14,5 +14,5 @@ RUN conda env create -n contrail-hunters -f environment.yml
 
 COPY . .
 
-#CMD [ "./test.sh"]
-ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "contrail-hunters", "python", "src/main.py"]
+CMD ["conda", "run", "--no-capture-output", "-n", "contrail-hunters", "python", "app.py"]
+EXPOSE 33507

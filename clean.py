@@ -23,10 +23,6 @@ def clean_files_past_min_time():
 
 	start_cleaner = datetime.now()
 
-	cwd = os.getcwd()
-
-	sys.path.insert(0, cwd)
-
 	now = pd.Timestamp.now(tz='UTC')
 	min_time = now - pd.Timedelta(hours=cfg.DEF_KEEP_FILES_HOURS)
 	log.info(f"Plots valid before the following time will be deleted: {min_time}")

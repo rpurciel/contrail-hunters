@@ -49,6 +49,7 @@ DEF_PLOT_DIR_NAME = "plots"
 DEF_FALLBACK_DATA_DIR = "data/gfs"
 DEF_FALLBACK_PLOT_DIR = "plots"
 
+DEF_MODEL_OUTPUT_LAG_HOURS = 12
 DEF_FORECAST_HOURS = 24
 
 #######################################################

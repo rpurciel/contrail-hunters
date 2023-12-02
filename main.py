@@ -21,6 +21,7 @@ import download_gfs as gfs
 import processor as cth
 import config as cfg
 import util as util
+import clean as clean
 
 if __name__ == "__main__":
 
@@ -42,7 +43,7 @@ if __name__ == "__main__":
 	log.setLevel(eval(cfg.DEBUG_LOGGING_LEVEL))
 
 	now = pd.Timestamp.now(tz='UTC')
-	start_time = now.floor(freq='24H')
+	start_time = (now - pd.Timedelta(hours=cfg.DEF_MODEL_OUTPUT_LAG_HOURS)).floor(freq="6H")
 	end_time = start_time + pd.Timedelta(hours=cfg.DEF_FORECAST_HOURS)
 	data_period = pd.period_range(start=start_time, end=end_time, freq='3H')
 	log.info(f"Downloading data between {start_time} - {end_time}")
@@ -139,7 +140,7 @@ if __name__ == "__main__":
 
 	log.info("Starting cleaning routine")
 	log.info("Deleting old plots...")
-	clean_time = clean_files_past_min_time()
+	clean_time = clean.clean_files_past_min_time()
 
 	if cfg.DEF_DELETE_DATA_AFTER_USE and not cfg.DEBUG_USE_STATIC_FILES:
 		log.info("Deleting data files after use...")
