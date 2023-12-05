@@ -6,8 +6,6 @@ import warnings
 import logging
 from datetime import datetime
 
-#from modeldata import ModelRunSeries, SingleRunData
-
 import pandas as pd
 import numpy as np
 import xarray as xr
@@ -24,6 +22,7 @@ from cartopy.feature import NaturalEarthFeature
 import metpy
 from metpy.units import units
 from PIL import Image
+import s3fs
 
 import util as internal
 import config as cfg
@@ -52,18 +51,22 @@ log_channel.setFormatter(log_format)
 log.addHandler(log_channel)
 log.setLevel(eval(cfg.DEBUG_LOGGING_LEVEL))
 
-def calculate_contrail_heights(data_file_path):
+def calculate_contrail_heights(data_file_url, aws_object):
 
     start_time = datetime.now()
 
     try:
-        data = xr.open_dataset(data_file_path, engine='cfgrib', 
-                                backend_kwargs={'filter_by_keys':{'typeOfLevel': 'isobaricInhPa'},'errors':'ignore'})                         
+        with aws_object.open(data_file_url, mode='rb') as data_file:
+            data = xr.load_dataset(data_file, 
+                                   engine='cfgrib', 
+                                   backend_kwargs={'filter_by_keys':{'typeOfLevel': 'isobaricInhPa'},'errors':'ignore'})                         
     except:
-        log.fatal("FATAL: could not open dataset")
+        log.fatal("Could not open dataset")
         raise RuntimeError("Could not open dataset")
     else:
         log.info("Successfully opened data file")
+
+    print(data)
 
     latitude = data.latitude.data
     longitude = data.longitude.data

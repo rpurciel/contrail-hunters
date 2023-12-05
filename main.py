@@ -9,6 +9,7 @@ cwd = os.getcwd()
 sys.path.insert(0, cwd)
 
 import pandas as pd
+import s3fs
 
 # ########## FOR TESTING ONLY, REMOVE ON PACKAGING ################
 # sys.path.insert(0, '/Users/ryanpurciel/Development/contrail-hunters') 
@@ -82,7 +83,7 @@ if __name__ == "__main__":
 	else:
 		log.info(f"Plots loading into {plot_dir}")
 
-	files = []
+	urls = []
 
 	start_downloader = datetime.now()
 	if cfg.DEBUG_USE_STATIC_FILES == True:
@@ -93,38 +94,40 @@ if __name__ == "__main__":
 			log.debug(f"Old .idx files removed from static dir")
 		files = sorted(glob.glob(static_dir + "/*"))
 	else:
-		log.info("Downloading files")
+		log.info("Listing files from AWS")
 		for time in data_period:
 			hours_from_start = round((time.to_timestamp(freq="H") - start_time.tz_localize(tz=None)).total_seconds() / 3600)
-
 			log.info(f"File params: y={year} m={month} d={day} hr={hour} fcst={hours_from_start}")
-			try:
-				status, dl_time, file_path = gfs.download(data_dir, year, month, day, hour, 
-				                                          forecast_hour=hours_from_start,
-				                                          force_fcst0=True,)
-			except Exception as e:
-				log.error(f"Critical download error: {e}. File not downloaded.")
-			else:
-				files += [file_path]
-				log.info(f"Success, took {dl_time / 60} minutes")
+			urls += [f"noaa-gfs-bdp-pds/gfs.{str(year).zfill(4)}{str(month).zfill(2)}{str(day).zfill(2)}/{str(hour).zfill(2)}/atmos/gfs.t{str(hour).zfill(2)}z.pgrb2.0p25.f{str(hours_from_start).zfill(3)}"]
+			
+			# try:
+			# 	status, dl_time, file_path = gfs.download(data_dir, year, month, day, hour, 
+			# 	                                          forecast_hour=hours_from_start,
+			# 	                                          force_fcst0=True,)
+			# except Exception as e:
+			# 	log.error(f"Critical download error: {e}. File not downloaded.")
+			# else:
+			# 	files += [file_path]
+			# 	log.info(f"Success, took {dl_time / 60} minutes")
 
 	download_time = (datetime.now() - start_downloader).total_seconds() / 60
 	log.info(f"Done downloading {len(data_period)} files")
 	log.info(f"Took {download_time} minutes")
 	log.info(f"Starting plotting routine")
 	start_processor = datetime.now()
-	for file in files:
+	aws = s3fs.S3FileSystem(anon=True)
+	for url in urls:
 		start_file = datetime.now()
-		log.info(f"File {file}")
+		log.info(f"File url {url}")
 		try:
-			result, calc_time = cth.calculate_contrail_heights(file)
+			result, calc_time = cth.calculate_contrail_heights(url, aws)
 		except Exception as e:
-			log.fatal(f"Contrail heights could not be calculated for {file}. Reason:")
+			log.fatal(f"Contrail heights could not be calculated for {url}. Reason:")
 		else:
 			log.info(f"Success, took {calc_time} seconds")
 
 		for region in cfg.DEF_REGIONS_TO_PLOT:
-			log.info(f"Plotting region {region} of file {file}")
+			log.info(f"Plotting region {region} of file {url}")
 			try:
 				plot_time = cth.plot_region(plot_dir, result, region)
 			except Exception as e:
@@ -133,7 +136,7 @@ if __name__ == "__main__":
 				log.info(f"Success, took {plot_time / 60} minutes")
 
 		file_time = (datetime.now() - start_file).total_seconds() / 60
-		log.info(f"Success for {file}, took {file_time} minutes")
+		log.info(f"Success for {url}, took {file_time} minutes")
 
 	processor_time = (datetime.now() - start_processor).total_seconds() / 60
 	log.info(f"Finished processing routines, took {processor_time} minutes")
@@ -142,17 +145,17 @@ if __name__ == "__main__":
 	log.info("Deleting old plots...")
 	clean_time = clean.clean_files_past_min_time()
 
-	if cfg.DEF_DELETE_DATA_AFTER_USE and not cfg.DEBUG_USE_STATIC_FILES:
-		log.info("Deleting data files after use...")
-		try:
-			shutil.rmtree(os.path.join(cwd, cfg.DEF_DATA_DIR_NAME))
-			log.info("Data removed sucessfully.")
-		except Exception as e:
-			log.error(f"Could not delete used data. Reason: {e}.")
-			log.warning("Used data not removed. Watch storage space.")
-	else:
-		log.info("Removal of used data is turned off.")
-		log.warning("Not removing used data. Watch storage space.")
+	# if cfg.DEF_DELETE_DATA_AFTER_USE and not cfg.DEBUG_USE_STATIC_FILES:
+	# 	log.info("Deleting data files after use...")
+	# 	try:
+	# 		shutil.rmtree(os.path.join(cwd, cfg.DEF_DATA_DIR_NAME))
+	# 		log.info("Data removed sucessfully.")
+	# 	except Exception as e:
+	# 		log.error(f"Could not delete used data. Reason: {e}.")
+	# 		log.warning("Used data not removed. Watch storage space.")
+	# else:
+	# 	log.info("Removal of used data is turned off.")
+	# 	log.warning("Not removing used data. Watch storage space.")
 
 
 	all_tasks_time = (datetime.now() - start_all_tasks).total_seconds() / 60
