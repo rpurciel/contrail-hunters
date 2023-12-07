@@ -22,7 +22,6 @@ from cartopy.feature import NaturalEarthFeature
 import metpy
 from metpy.units import units
 from PIL import Image
-import s3fs
 
 import util as internal
 import config as cfg
@@ -44,29 +43,28 @@ DEF_FILE_DPI = 300
 log = logging.getLogger("proc")
 log_format = logging.Formatter("[%(asctime)s:%(filename)s:%(lineno)s]%(levelname)s:%(message)s",
                                datefmt="%Y-%m-%d %H:%M:%S %Z",)
-if cfg.DEBUG_LOG_TO_STDOUT:
-    log_channel = logging.StreamHandler(stream=sys.stdout)
+# if cfg.DEBUG_LOG_TO_STDOUT:
+#     #log_channel = logging.StreamHandler(stream=sys.stdout)
 
-log_channel.setFormatter(log_format)
-log.addHandler(log_channel)
+#log_channel.setFormatter(log_format)
+#log.addHandler(log_channel)
 log.setLevel(eval(cfg.DEBUG_LOGGING_LEVEL))
 
-def calculate_contrail_heights(data_file_url, aws_object):
+def calculate_contrail_heights(data_file):
 
     start_time = datetime.now()
 
     try:
-        with aws_object.open(data_file_url, mode='rb') as data_file:
-            data = xr.load_dataset(data_file, 
-                                   engine='cfgrib', 
-                                   backend_kwargs={'filter_by_keys':{'typeOfLevel': 'isobaricInhPa'},'errors':'ignore'})                         
+        data = xr.load_dataset(data_file, 
+                               engine='cfgrib', 
+                               backend_kwargs={'filter_by_keys':{'typeOfLevel': 'isobaricInhPa'},'errors':'ignore'})                         
     except:
         log.fatal("Could not open dataset")
         raise RuntimeError("Could not open dataset")
     else:
         log.info("Successfully opened data file")
 
-    print(data)
+    #print(data)
 
     latitude = data.latitude.data
     longitude = data.longitude.data
