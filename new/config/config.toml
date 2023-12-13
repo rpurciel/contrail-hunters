@@ -1,0 +1,72 @@
+[download]
+Model = 'gfs' #only GFS is implemented
+DataDirPath = 'data'
+ModelOutputLagHours = 12
+ForecastHours = 24
+
+[calculation]
+Units = 'ft'
+
+[plotting]
+PlotDirPath = 'plots'
+RegionsToPlot = ['US', 'NA', 'SA', 'EU', 'OC']
+Branding = "ContrailHunters™"
+DPI = 300
+
+[plotting.colors]
+ColorPallete = ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet', 'purple']
+BelowMinHeightColor = 'darkred'
+AboveMaxHeightColor = 'navy'
+
+[plotting.colors.colorbar]
+Visible = true
+LabelVisible = true
+Label = 'ContrailHeights'
+ShrinkFactor = 0.5
+Location = 'right'
+TickLabelFormat = 'FL{x:3.0f}'
+
+[plotting.geography]
+Visible = true
+DrawBigCities = true #not yet implemented
+DrawAirports = true #not yet implemented
+DrawStates = true
+DrawCoastlines = true
+DrawBorders = true
+DrawWater = true
+
+[plotting.gridlines]
+Visible = true
+Width = 8
+Style = '--'
+LabelVisible = true
+LabelSize = true
+
+[plotting.logo]
+SizePix = 500
+MarginX = -240
+MarginY = -550
+Alpha = 0.8
+
+[plotting.units]
+ftLevels = [15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 55000]
+ftMinLevel = 15000
+ftMaxLevel = 55000
+
+mLevels = [4572, 6096, 7620, 9144, 10668, 12192, 13716, 15240, 16764]
+mMinLevel = 4572
+mMaxLevel = 16764
+
+[file]
+#TODO: Docs for what variables can be used in naming scheme
+NamingScheme = "GFS_Contrail_Heights_{valid_time_str}_{region_name}"
+
+[logging]
+LoggingLevel = 'logging.DEBUG'
+LogDirPath = 'logs'
+LogToSTDOUT = false
+
+[misc]
+AncillaryDirPath = 'ancillary'
+RegionConfigPath = 'config/regions.toml'
+ModelConfigPath = 'config/models.toml'

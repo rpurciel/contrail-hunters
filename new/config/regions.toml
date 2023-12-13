@@ -1,0 +1,67 @@
+[[regions]]
+id = 'US'
+name = 'CONUS'
+north = 50
+south = 23
+east = -73
+west = -122
+proj = 'LambertConformal'
+central_lat = 35
+central_lon = -95
+std_parallels = [30, 60]
+
+[[regions]]
+id = 'NA'
+name = 'North America'
+north = 72
+south = 6
+east = -45
+west = -160
+proj = 'LambertConformal'
+central_lat = 35
+central_lon = -95
+
+[[regions]]
+id = 'SA'
+name = 'South America'
+north = 14
+south = -60
+east = -28
+west = -90
+proj = 'PlateCarree'
+
+[[regions]]
+id = 'EU'
+name = 'Europe'
+north = 75
+south = 33
+east = -20
+west = 45
+proj = 'PlateCarree'
+
+[[regions]]
+id = 'AF'
+name = 'Africa'
+north = 40
+south = -37
+east = -20
+west = 61
+proj = 'PlateCarree'
+
+[[regions]]
+id = 'AS'
+name = 'Asia'
+north = 85
+south = 0
+east = 40
+west = 155
+proj = 'PlateCarree'
+
+[[regions]]
+id = 'OC'
+name = 'Oceania'
+north = 0
+south = -50
+east = 105
+west = 180
+proj = 'PlateCarree'

@@ -1,0 +1,7 @@
+[[models.gfs]]
+id = 'gfs'
+name = 'GFS'
+bucket_name = 'noaa-gfs-bdp-pds'
+key_pattern = 'gfs.{year}{month}{day}/{hour}/atmos/gfs.t{hour}z.pgrb2.0p25.f{fcst_hr}'
+fallback_key_pattern = 'gfs.{year}{month}{day}/{hour}/gfs.t{hour}z.pgrb2.0p25.f{fcst_hr}'
+file_ext = '.grib2'
