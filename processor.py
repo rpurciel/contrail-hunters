@@ -110,16 +110,38 @@ class ContrailProcessor:
 	def populate_keys(self, *args):
 
 		now = pd.Timestamp.now(tz='UTC')
+		'''
+		Populate this processor object with valid AWS keys
+		for downloading of model data.
+
+		Parameters
+		----------
+		bucket  : str
+			Bucket name to use.
+		key_pattern  : str
+			Key pattern string to use. If glob_match is False, must be a
+			path to a folder containing files (not subfolders), otherwise
+			nothing will be downloaded.
+			If glob_match is True, uses standard terminology.
+		glob_match  : bool, optional [default: False]
+			Turns on glob-style matching for key names.
+
+		Returns
+		-------
+		out  : A list of valid file keys for the given bucket.
+		'''
 		modelLagHours = self.config['download']['ModelOutputLagHours']
 
 		if args:
 			now = args[0]
 			modelLagHours = 0
+			if len(args) > 1:
+				fcst_len = args[1]
 
 		start_time = (now - pd.Timedelta(hours=modelLagHours)).floor(freq="6H")
 		end_time = start_time + pd.Timedelta(hours=self.config['download']['ForecastHours'])
 
-		data_period = pd.period_range(start=start_time, end=end_time, freq='3H')
+		data_period = pd.period_range(start=start_time, end=end_time, freq=f'{self.config['download']['ForecastTimeIncrements']}H')
 		log.debug(f"Downloading data between {start_time} - {end_time}")
 
 		valid_keys = []
@@ -160,20 +182,39 @@ class ContrailProcessor:
 		if path[-1:] != "/":
 			path = path + "/"
 
+		abs_path = os.path.join(os.getcwd(), self.data_dir)
+
 		self.data_files = glob.glob(path + "*" + self.sel_model['file_ext'])
 
-		log.info(f"Loaded {len(self.data_files)} files from path {path}")
+		log.info(f"Loaded {len(self.data_files)} files from path {abs_path}")
+
+	def clean_idx_files(self):
+
+		abs_dir = os.path.join(os.getcwd(), self.data_dir)
+
+		log.info("Deleting used .idx files from data dir")
+
+		files = glob.glob(abs_dir + "/*.idx")
+		if not files:
+			log.info("No IDX files found")
+		else:
+			for file in files:
+				os.remove(file)
 
 	def delete_data_files(self):
 
 		abs_dir = os.path.join(os.getcwd(), self.data_dir)
-
 		log.info(f"Deleting data files from defined data directory ({abs_dir})")
-
 		shutil.rmtree(abs_dir)
-
 		os.makedirs(abs_dir)
+		log.info("All files deleted.")
 
+	def delete_plots(self):
+
+		abs_dir = os.path.join(os.getcwd(), self.plot_dir)
+		log.info(f"Deleting plots from defined plot directory ({abs_dir})")
+		shutil.rmtree(abs_dir)
+		os.makedirs(abs_dir)
 		log.info("All files deleted.")
 
 	def aws_download_multithread(self):

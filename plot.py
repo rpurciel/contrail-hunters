@@ -196,17 +196,24 @@ def plot_region(save_dir: str,
 	logo = os.path.join(ancillary_dir, logo_sized)
 	img = Image.open(logo)
 	# ax.imshow(img, extent=(0.4, 0.6, 5, 5), zorder=15, alpha=cfg.DEF_LOGO_ALPHA)
-	fig.figimage(img, xo=ax.bbox.xmin + config['plotting']['logo']['MarginX'], yo=ax.bbox.ymin + config['plotting']['logo']['MarginY'], zorder=15, alpha=config['plotting']['logo']['Alpha'])
+
+	if region_id == 'US':
+		proj_padding = 50
+	else:
+		proj_padding = 0
+	fig.figimage(img, xo=ax.bbox.xmin + config['plotting']['logo']['MarginX'], yo=ax.bbox.ymin + (config['plotting']['logo']['MarginY'] + proj_padding), zorder=15, alpha=config['plotting']['logo']['Alpha'])
 
 	region_name = region_name.replace(" ", "").upper()
 	valid_time_str = valid_time.strftime('%Y%m%d_%H%M%S%Z')
 	
 	file_name = config['file']['NamingScheme'].format(**locals())
-	
-	if not os.path.exists(save_dir):
-		os.makedirs(save_dir)
 
-	dest_path = os.path.join(save_dir, file_name + ".png")
+	out_dir = os.path.join(save_dir, region_id)
+	
+	if not os.path.exists(out_dir):
+		os.makedirs(out_dir)
+
+	dest_path = os.path.join(out_dir, file_name + ".png")
 
 	try:
 		plt.savefig(dest_path, bbox_inches="tight", dpi=config['plotting']['DPI'])
