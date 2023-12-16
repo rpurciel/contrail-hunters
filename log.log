@@ -1,0 +1,1398 @@
+[2023-12-16 12:16:38 PST:main:processor.py->populate_keys:123:PID15083:T140704646598272]DEBUG:Downloading data between 2023-12-16 06:00:00+00:00 - 2023-12-17 06:00:00+00:00
+[2023-12-16 12:16:38 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=0
+[2023-12-16 12:16:40 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=3
+[2023-12-16 12:16:40 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=6
+[2023-12-16 12:16:40 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=9
+[2023-12-16 12:16:40 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=12
+[2023-12-16 12:16:41 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=15
+[2023-12-16 12:16:41 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=18
+[2023-12-16 12:16:42 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=21
+[2023-12-16 12:16:42 PST:main:processor.py->populate_keys:140:PID15083:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=24
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145553121280]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145569910784]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145586700288]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145603489792]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145620279296]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145637068800]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145653858304]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145670647808]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:42 PST:main:processor.py->_aws_download_multithread_worker:198:PID15083:T123145687437312]DEBUG:Spinning up download thread...
+[2023-12-16 12:16:44 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145553121280]INFO:Starting download: gfs.t06z.pgrb2.0p25.f000
+[2023-12-16 12:16:44 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145637068800]INFO:Starting download: gfs.t06z.pgrb2.0p25.f015
+[2023-12-16 12:16:44 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145603489792]INFO:Starting download: gfs.t06z.pgrb2.0p25.f009
+[2023-12-16 12:16:44 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145569910784]INFO:Starting download: gfs.t06z.pgrb2.0p25.f003
+[2023-12-16 12:16:44 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145586700288]INFO:Starting download: gfs.t06z.pgrb2.0p25.f006
+[2023-12-16 12:16:45 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145687437312]INFO:Starting download: gfs.t06z.pgrb2.0p25.f024
+[2023-12-16 12:16:45 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145620279296]INFO:Starting download: gfs.t06z.pgrb2.0p25.f012
+[2023-12-16 12:16:45 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145670647808]INFO:Starting download: gfs.t06z.pgrb2.0p25.f021
+[2023-12-16 12:16:45 PST:main:processor.py->_aws_download_multithread_worker:206:PID15083:T123145653858304]INFO:Starting download: gfs.t06z.pgrb2.0p25.f018
+[2023-12-16 12:18:47 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145687437312]INFO:Download finished: gfs.t06z.pgrb2.0p25.f024
+[2023-12-16 12:18:47 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145687437312]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:47 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145670647808]INFO:Download finished: gfs.t06z.pgrb2.0p25.f021
+[2023-12-16 12:18:47 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145670647808]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:49 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145637068800]INFO:Download finished: gfs.t06z.pgrb2.0p25.f015
+[2023-12-16 12:18:49 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145637068800]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:50 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145569910784]INFO:Download finished: gfs.t06z.pgrb2.0p25.f003
+[2023-12-16 12:18:50 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145569910784]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:50 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145603489792]INFO:Download finished: gfs.t06z.pgrb2.0p25.f009
+[2023-12-16 12:18:50 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145603489792]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:53 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145553121280]INFO:Download finished: gfs.t06z.pgrb2.0p25.f000
+[2023-12-16 12:18:53 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145553121280]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:54 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145586700288]INFO:Download finished: gfs.t06z.pgrb2.0p25.f006
+[2023-12-16 12:18:54 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145586700288]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:55 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145653858304]INFO:Download finished: gfs.t06z.pgrb2.0p25.f018
+[2023-12-16 12:18:55 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145653858304]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:56 PST:main:processor.py->_aws_download_multithread_worker:213:PID15083:T123145620279296]INFO:Download finished: gfs.t06z.pgrb2.0p25.f012
+[2023-12-16 12:18:56 PST:main:processor.py->_aws_download_multithread_worker:214:PID15083:T123145620279296]DEBUG:Download thread spinning down...
+[2023-12-16 12:18:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15172:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:18:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15177:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:18:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15172:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:18:59.340937+00:00 UTC
+[2023-12-16 12:18:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15177:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:18:59.341061+00:00 UTC
+[2023-12-16 12:18:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15175:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:18:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15175:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:18:59.355770+00:00 UTC
+[2023-12-16 12:18:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15176:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:18:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15176:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:18:59.358506+00:00 UTC
+[2023-12-16 12:18:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15173:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:18:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15173:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:18:59.361303+00:00 UTC
+[2023-12-16 12:18:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15174:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:18:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15174:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:18:59.364971+00:00 UTC
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15176:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15176:T140704646598272]INFO:Parsing time 2023-12-16 09:00:00
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15173:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15173:T140704646598272]INFO:Parsing time 2023-12-16 12:00:00
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15175:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15175:T140704646598272]INFO:Parsing time 2023-12-16 15:00:00
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15172:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15172:T140704646598272]INFO:Parsing time 2023-12-16 06:00:00
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15174:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15174:T140704646598272]INFO:Parsing time 2023-12-17 06:00:00
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15177:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:19:15 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15177:T140704646598272]INFO:Parsing time 2023-12-16 21:00:00
+[2023-12-16 12:19:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15177:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:19:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15176:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:19:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15173:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:19:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15174:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:19:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15172:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:19:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15175:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:19:31 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15177:T140704646598272]INFO:Done, took 31.67326 sec.
+[2023-12-16 12:19:31 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15176:T140704646598272]INFO:Done, took 31.687085 sec.
+[2023-12-16 12:19:31 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15172:T140704646598272]INFO:Done, took 31.746887 sec.
+[2023-12-16 12:19:31 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15173:T140704646598272]INFO:Done, took 31.807307 sec.
+[2023-12-16 12:19:31 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15175:T140704646598272]INFO:Done, took 31.878115 sec.
+[2023-12-16 12:19:31 PST:main.plot:plot.py->plot_region:37:PID15177:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:19:31.452340+00:00 UTC
+[2023-12-16 12:19:31 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15174:T140704646598272]INFO:Done, took 32.092117 sec.
+[2023-12-16 12:19:31 PST:main.plot:plot.py->plot_region:37:PID15176:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:19:31.473991+00:00 UTC
+[2023-12-16 12:19:31 PST:main.plot:plot.py->plot_region:37:PID15172:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:19:31.494299+00:00 UTC
+[2023-12-16 12:19:31 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:19:31.572880+00:00 UTC
+[2023-12-16 12:19:31 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:19:31.618472+00:00 UTC
+[2023-12-16 12:19:31 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:19:31.782934+00:00 UTC
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:61:PID15176:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:61:PID15172:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:61:PID15177:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:103:PID15177:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:106:PID15177:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:109:PID15177:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:112:PID15177:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:103:PID15176:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:106:PID15176:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:109:PID15176:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:112:PID15176:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:183:PID15177:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:184:PID15177:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:185:PID15177:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:189:PID15177:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:190:PID15177:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:183:PID15176:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:184:PID15176:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:185:PID15176:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:189:PID15176:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:190:PID15176:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:103:PID15172:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:106:PID15172:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:109:PID15172:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:112:PID15172:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:183:PID15172:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:184:PID15172:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:185:PID15172:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:189:PID15172:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:32 PST:main.plot:plot.py->plot_region:190:PID15172:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:43 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_CONUS.png
+[2023-12-16 12:19:43 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region CONUS, took 11.782365 sec.
+[2023-12-16 12:19:43 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:19:43.565795+00:00 UTC
+[2023-12-16 12:19:43 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:19:43 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_CONUS.png
+[2023-12-16 12:19:43 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region CONUS, took 12.331277 sec.
+[2023-12-16 12:19:43 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:19:43.950159+00:00 UTC
+[2023-12-16 12:19:43 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_CONUS.png
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region CONUS, took 12.470343 sec.
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:19:44.043664+00:00 UTC
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:216:PID15176:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_CONUS.png
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:220:PID15176:T140704646598272]INFO:Done with plotting routine for region CONUS, took 12.837835 sec.
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:37:PID15176:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:19:44.312288+00:00 UTC
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:61:PID15176:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:216:PID15177:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_CONUS.png
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:220:PID15177:T140704646598272]INFO:Done with plotting routine for region CONUS, took 12.986229 sec.
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:37:PID15177:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:19:44.438943+00:00 UTC
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:61:PID15177:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:103:PID15176:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:106:PID15176:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:109:PID15176:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:44 PST:main.plot:plot.py->plot_region:112:PID15176:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:183:PID15176:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:184:PID15176:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:185:PID15176:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:189:PID15176:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:190:PID15176:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:216:PID15172:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_CONUS.png
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:220:PID15172:T140704646598272]INFO:Done with plotting routine for region CONUS, took 13.579267 sec.
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:37:PID15172:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:19:45.074454+00:00 UTC
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:61:PID15172:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:103:PID15177:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:106:PID15177:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:109:PID15177:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:112:PID15177:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:183:PID15177:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:184:PID15177:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:185:PID15177:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:189:PID15177:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:190:PID15177:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:103:PID15172:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:106:PID15172:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:109:PID15172:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:112:PID15172:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:183:PID15172:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:184:PID15172:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:185:PID15172:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:189:PID15172:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:45 PST:main.plot:plot.py->plot_region:190:PID15172:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:58 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_NORTHAMERICA.png
+[2023-12-16 12:19:58 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.426747 sec.
+[2023-12-16 12:19:58 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:19:58.993068+00:00 UTC
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_NORTHAMERICA.png
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.193677 sec.
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:19:59.144175+00:00 UTC
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_NORTHAMERICA.png
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.302146 sec.
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:19:59.346149+00:00 UTC
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:216:PID15177:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_NORTHAMERICA.png
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:220:PID15177:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.083041 sec.
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:37:PID15177:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:19:59.522360+00:00 UTC
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:61:PID15177:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:216:PID15176:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_NORTHAMERICA.png
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:220:PID15176:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.317476 sec.
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:37:PID15176:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:19:59.630255+00:00 UTC
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:61:PID15176:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:103:PID15177:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:106:PID15177:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:109:PID15177:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:112:PID15177:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:183:PID15177:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:184:PID15177:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:185:PID15177:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:189:PID15177:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:19:59 PST:main.plot:plot.py->plot_region:190:PID15177:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:103:PID15176:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:106:PID15176:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:109:PID15176:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:112:PID15176:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:183:PID15176:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:184:PID15176:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:185:PID15176:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:189:PID15176:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:190:PID15176:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:216:PID15172:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_NORTHAMERICA.png
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:220:PID15172:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.088581 sec.
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:37:PID15172:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:20:00.163416+00:00 UTC
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:61:PID15172:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_SOUTHAMERICA.png
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.415463 sec.
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:00.408946+00:00 UTC
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:103:PID15172:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:106:PID15172:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:109:PID15172:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:112:PID15172:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:183:PID15172:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:184:PID15172:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:185:PID15172:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:189:PID15172:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:190:PID15172:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_SOUTHAMERICA.png
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.454974 sec.
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:00.599589+00:00 UTC
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_SOUTHAMERICA.png
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.517401 sec.
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:00.863982+00:00 UTC
+[2023-12-16 12:20:00 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:216:PID15177:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_SOUTHAMERICA.png
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:220:PID15177:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.512765 sec.
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:37:PID15177:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:01.037988+00:00 UTC
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:61:PID15177:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:216:PID15176:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_SOUTHAMERICA.png
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:220:PID15176:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.669105 sec.
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:37:PID15176:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:01.299812+00:00 UTC
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:61:PID15176:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:103:PID15177:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:106:PID15177:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:109:PID15177:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:112:PID15177:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:183:PID15177:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:184:PID15177:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:185:PID15177:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:189:PID15177:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:190:PID15177:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:103:PID15176:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:106:PID15176:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:109:PID15176:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:112:PID15176:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:183:PID15176:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:184:PID15176:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:185:PID15176:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:189:PID15176:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:190:PID15176:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:216:PID15172:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_SOUTHAMERICA.png
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:220:PID15172:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.5205769999999998 sec.
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:37:PID15172:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:01.684601+00:00 UTC
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:61:PID15172:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_EUROPE.png
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.5637349999999999 sec.
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:01.973024+00:00 UTC
+[2023-12-16 12:20:01 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:103:PID15172:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:106:PID15172:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:109:PID15172:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:112:PID15172:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:183:PID15172:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:184:PID15172:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:185:PID15172:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:189:PID15172:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:190:PID15172:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_EUROPE.png
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.533594 sec.
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:02.133521+00:00 UTC
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_EUROPE.png
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.572967 sec.
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:02.437985+00:00 UTC
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:216:PID15177:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_EUROPE.png
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:220:PID15177:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.5333679999999998 sec.
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:37:PID15177:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:02.571750+00:00 UTC
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:61:PID15177:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:216:PID15176:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_EUROPE.png
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:220:PID15176:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.438496 sec.
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:37:PID15176:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:02.738813+00:00 UTC
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:61:PID15176:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:103:PID15177:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:106:PID15177:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:109:PID15177:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:112:PID15177:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:183:PID15177:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:184:PID15177:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:185:PID15177:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:189:PID15177:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:02 PST:main.plot:plot.py->plot_region:190:PID15177:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:103:PID15176:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:106:PID15176:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:109:PID15176:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:112:PID15176:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:183:PID15176:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:184:PID15176:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:185:PID15176:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:189:PID15176:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:190:PID15176:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:216:PID15172:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_EUROPE.png
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:220:PID15172:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.459326 sec.
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:37:PID15172:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:03.144267+00:00 UTC
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:61:PID15172:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_OCEANIA.png
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.400868 sec.
+[2023-12-16 12:20:03 PST:main:processor.py->_plot_multiprocess_worker:62:PID15174:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:03 PST:main:processor.py->_plot_multiprocess_worker:41:PID15174:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:20:03 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15174:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:20:03.374603+00:00 UTC
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:103:PID15172:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:106:PID15172:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:109:PID15172:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:112:PID15172:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:183:PID15172:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:184:PID15172:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:185:PID15172:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:189:PID15172:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:190:PID15172:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_OCEANIA.png
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.389835 sec.
+[2023-12-16 12:20:03 PST:main:processor.py->_plot_multiprocess_worker:62:PID15175:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:03 PST:main:processor.py->_plot_multiprocess_worker:41:PID15175:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:20:03 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15175:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:20:03.526323+00:00 UTC
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_OCEANIA.png
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.326489 sec.
+[2023-12-16 12:20:03 PST:main:processor.py->_plot_multiprocess_worker:62:PID15173:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:03 PST:main:processor.py->_plot_multiprocess_worker:41:PID15173:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:20:03 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15173:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:20:03.765023+00:00 UTC
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:216:PID15177:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_OCEANIA.png
+[2023-12-16 12:20:03 PST:main.plot:plot.py->plot_region:220:PID15177:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.398183 sec.
+[2023-12-16 12:20:03 PST:main:processor.py->_plot_multiprocess_worker:62:PID15177:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:04 PST:main.plot:plot.py->plot_region:216:PID15176:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_OCEANIA.png
+[2023-12-16 12:20:04 PST:main.plot:plot.py->plot_region:220:PID15176:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.373848 sec.
+[2023-12-16 12:20:04 PST:main:processor.py->_plot_multiprocess_worker:62:PID15176:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:04 PST:main.plot:plot.py->plot_region:216:PID15172:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_OCEANIA.png
+[2023-12-16 12:20:04 PST:main.plot:plot.py->plot_region:220:PID15172:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.295941 sec.
+[2023-12-16 12:20:04 PST:main:processor.py->_plot_multiprocess_worker:62:PID15172:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15174:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:20:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15174:T140704646598272]INFO:Parsing time 2023-12-16 18:00:00
+[2023-12-16 12:20:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15175:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:20:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15175:T140704646598272]INFO:Parsing time 2023-12-17 03:00:00
+[2023-12-16 12:20:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15173:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:20:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15173:T140704646598272]INFO:Parsing time 2023-12-17 00:00:00
+[2023-12-16 12:20:31 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15174:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:20:34 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15175:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:20:34 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15173:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:20:35 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15174:T140704646598272]INFO:Done, took 31.762502 sec.
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:20:35.325778+00:00 UTC
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:35 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:37 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15175:T140704646598272]INFO:Done, took 33.581124 sec.
+[2023-12-16 12:20:37 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15173:T140704646598272]INFO:Done, took 33.467941 sec.
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:20:37.316596+00:00 UTC
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:20:37.465531+00:00 UTC
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:37 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:38 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:38 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:38 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:38 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:38 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_CONUS.png
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region CONUS, took 4.902952 sec.
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:20:40.229164+00:00 UTC
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:40 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_CONUS.png
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region CONUS, took 5.104576 sec.
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:20:42.421563+00:00 UTC
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_CONUS.png
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region CONUS, took 5.114991 sec.
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:20:42.580840+00:00 UTC
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:42 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_NORTHAMERICA.png
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 2.932146 sec.
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:20:43.162240+00:00 UTC
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:43 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_SOUTHAMERICA.png
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.1402160000000001 sec.
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:44.302790+00:00 UTC
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:44 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_EUROPE.png
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.043161 sec.
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:37:PID15174:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:45.346320+00:00 UTC
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:61:PID15174:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_NORTHAMERICA.png
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 3.163908 sec.
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:20:45.585799+00:00 UTC
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_NORTHAMERICA.png
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 3.043817 sec.
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:20:45.625137+00:00 UTC
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:103:PID15174:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:106:PID15174:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:109:PID15174:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:112:PID15174:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:183:PID15174:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:184:PID15174:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:185:PID15174:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:189:PID15174:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:190:PID15174:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:45 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_SOUTHAMERICA.png
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.100998 sec.
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:46.687104+00:00 UTC
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_SOUTHAMERICA.png
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.0933950000000001 sec.
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:20:46.718841+00:00 UTC
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:216:PID15174:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_OCEANIA.png
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:220:PID15174:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.390106 sec.
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:20:46 PST:main:processor.py->_plot_multiprocess_worker:62:PID15174:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:46 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_EUROPE.png
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.023651 sec.
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:37:PID15175:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:47.711060+00:00 UTC
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:61:PID15175:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_EUROPE.png
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.038671 sec.
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:37:PID15173:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:20:47.757826+00:00 UTC
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:61:PID15173:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:103:PID15175:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:106:PID15175:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:109:PID15175:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:47 PST:main.plot:plot.py->plot_region:112:PID15175:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:183:PID15175:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:184:PID15175:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:185:PID15175:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:189:PID15175:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:190:PID15175:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:103:PID15173:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:106:PID15173:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:109:PID15173:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:112:PID15173:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:183:PID15173:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:184:PID15173:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:185:PID15173:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:189:PID15173:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:20:48 PST:main.plot:plot.py->plot_region:190:PID15173:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:20:49 PST:main.plot:plot.py->plot_region:216:PID15175:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_OCEANIA.png
+[2023-12-16 12:20:49 PST:main.plot:plot.py->plot_region:220:PID15175:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.294297 sec.
+[2023-12-16 12:20:49 PST:main:processor.py->_plot_multiprocess_worker:62:PID15175:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:49 PST:main.plot:plot.py->plot_region:216:PID15173:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_OCEANIA.png
+[2023-12-16 12:20:49 PST:main.plot:plot.py->plot_region:220:PID15173:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.304217 sec.
+[2023-12-16 12:20:49 PST:main:processor.py->_plot_multiprocess_worker:62:PID15173:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:20:49 PST:main:processor.py->delete_data_files:171:PID15083:T140704646598272]INFO:Deleting data files from defined data directory (/Users/rpurciel/Development/contrail-hunters/new/data)
+[2023-12-16 12:20:49 PST:main:processor.py->delete_data_files:177:PID15083:T140704646598272]INFO:All files deleted.
+[2023-12-16 12:23:44 PST:main:main.py-><module>:32:PID15276:T140704646598272]INFO:CONTRAIL HUNTERS VERSION 23.12.00_1
+[2023-12-16 12:23:44 PST:main:main.py-><module>:33:PID15276:T140704646598272]INFO:Starting up....
+[2023-12-16 12:23:44 PST:main:main.py-><module>:34:PID15276:T140704646598272]INFO:Launched at 2023-12-16 20:23:44.422080+00:00
+[2023-12-16 12:23:44 PST:main:processor.py->populate_keys:123:PID15276:T140704646598272]DEBUG:Downloading data between 2023-12-16 06:00:00+00:00 - 2023-12-17 06:00:00+00:00
+[2023-12-16 12:23:44 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=0
+[2023-12-16 12:23:45 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=3
+[2023-12-16 12:23:45 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=6
+[2023-12-16 12:23:45 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=9
+[2023-12-16 12:23:45 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=12
+[2023-12-16 12:23:46 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=15
+[2023-12-16 12:23:46 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=18
+[2023-12-16 12:23:46 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=21
+[2023-12-16 12:23:46 PST:main:processor.py->populate_keys:140:PID15276:T140704646598272]DEBUG:File params: y=2023 m=12 d=16 hr=06 fcst=24
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145553149952]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145569939456]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145586728960]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145603518464]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145620307968]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145637097472]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145653886976]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145670676480]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:46 PST:main:processor.py->_aws_download_multithread_worker:198:PID15276:T123145687465984]DEBUG:Spinning up download thread...
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145586728960]INFO:Starting download: gfs.t06z.pgrb2.0p25.f006
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145620307968]INFO:Starting download: gfs.t06z.pgrb2.0p25.f012
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145569939456]INFO:Starting download: gfs.t06z.pgrb2.0p25.f003
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145553149952]INFO:Starting download: gfs.t06z.pgrb2.0p25.f000
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145603518464]INFO:Starting download: gfs.t06z.pgrb2.0p25.f009
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145637097472]INFO:Starting download: gfs.t06z.pgrb2.0p25.f015
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145670676480]INFO:Starting download: gfs.t06z.pgrb2.0p25.f021
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145653886976]INFO:Starting download: gfs.t06z.pgrb2.0p25.f018
+[2023-12-16 12:23:48 PST:main:processor.py->_aws_download_multithread_worker:206:PID15276:T123145687465984]INFO:Starting download: gfs.t06z.pgrb2.0p25.f024
+[2023-12-16 12:25:40 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145637097472]INFO:Download finished: gfs.t06z.pgrb2.0p25.f015
+[2023-12-16 12:25:40 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145637097472]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:45 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145620307968]INFO:Download finished: gfs.t06z.pgrb2.0p25.f012
+[2023-12-16 12:25:45 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145620307968]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:48 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145553149952]INFO:Download finished: gfs.t06z.pgrb2.0p25.f000
+[2023-12-16 12:25:48 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145553149952]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:53 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145653886976]INFO:Download finished: gfs.t06z.pgrb2.0p25.f018
+[2023-12-16 12:25:53 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145653886976]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:54 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145670676480]INFO:Download finished: gfs.t06z.pgrb2.0p25.f021
+[2023-12-16 12:25:54 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145670676480]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:54 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145586728960]INFO:Download finished: gfs.t06z.pgrb2.0p25.f006
+[2023-12-16 12:25:54 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145586728960]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:55 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145687465984]INFO:Download finished: gfs.t06z.pgrb2.0p25.f024
+[2023-12-16 12:25:55 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145687465984]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:56 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145569939456]INFO:Download finished: gfs.t06z.pgrb2.0p25.f003
+[2023-12-16 12:25:56 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145569939456]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:56 PST:main:processor.py->_aws_download_multithread_worker:213:PID15276:T123145603518464]INFO:Download finished: gfs.t06z.pgrb2.0p25.f009
+[2023-12-16 12:25:56 PST:main:processor.py->_aws_download_multithread_worker:214:PID15276:T123145603518464]DEBUG:Download thread spinning down...
+[2023-12-16 12:25:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15311:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:25:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15311:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:25:59.367276+00:00 UTC
+[2023-12-16 12:25:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15312:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:25:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15312:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:25:59.378142+00:00 UTC
+[2023-12-16 12:25:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15315:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:25:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15315:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:25:59.390289+00:00 UTC
+[2023-12-16 12:25:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15313:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:25:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15313:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:25:59.391200+00:00 UTC
+[2023-12-16 12:25:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15314:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:25:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15314:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:25:59.394262+00:00 UTC
+[2023-12-16 12:25:59 PST:main:processor.py->_plot_multiprocess_worker:41:PID15316:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:25:59 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15316:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:25:59.404345+00:00 UTC
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15315:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15315:T140704646598272]INFO:Parsing time 2023-12-16 09:00:00
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15312:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15312:T140704646598272]INFO:Parsing time 2023-12-16 18:00:00
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15314:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15314:T140704646598272]INFO:Parsing time 2023-12-16 15:00:00
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15313:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15313:T140704646598272]INFO:Parsing time 2023-12-16 06:00:00
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15316:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15316:T140704646598272]INFO:Parsing time 2023-12-16 21:00:00
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15311:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:26:16 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15311:T140704646598272]INFO:Parsing time 2023-12-16 12:00:00
+[2023-12-16 12:26:25 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15315:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:26:25 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15312:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:26:25 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15311:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:26:25 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15313:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:26:25 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15316:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:26:25 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15314:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:26:28 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15315:T140704646598272]INFO:Done, took 29.556028 sec.
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:37:PID15315:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:26:29.186598+00:00 UTC
+[2023-12-16 12:26:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15312:T140704646598272]INFO:Done, took 29.840705 sec.
+[2023-12-16 12:26:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15311:T140704646598272]INFO:Done, took 29.951787 sec.
+[2023-12-16 12:26:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15314:T140704646598272]INFO:Done, took 29.961832 sec.
+[2023-12-16 12:26:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15313:T140704646598272]INFO:Done, took 30.021053 sec.
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:61:PID15315:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:26:29 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15316:T140704646598272]INFO:Done, took 30.082252 sec.
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:26:29.493137+00:00 UTC
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:26:29.631419+00:00 UTC
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:26:29.664064+00:00 UTC
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:37:PID15313:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:26:29.734087+00:00 UTC
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:37:PID15316:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:26:29.807028+00:00 UTC
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:26:29 PST:main.plot:plot.py->plot_region:61:PID15313:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:61:PID15316:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:103:PID15315:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:106:PID15315:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:109:PID15315:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:112:PID15315:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:183:PID15315:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:184:PID15315:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:185:PID15315:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:189:PID15315:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:190:PID15315:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:103:PID15313:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:106:PID15313:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:109:PID15313:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:112:PID15313:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:183:PID15313:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:184:PID15313:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:185:PID15313:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:189:PID15313:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:190:PID15313:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:103:PID15316:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:106:PID15316:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:109:PID15316:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:112:PID15316:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:183:PID15316:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:184:PID15316:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:185:PID15316:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:189:PID15316:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:30 PST:main.plot:plot.py->plot_region:190:PID15316:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:40 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_CONUS.png
+[2023-12-16 12:26:40 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region CONUS, took 11.469476 sec.
+[2023-12-16 12:26:40 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:26:40.963073+00:00 UTC
+[2023-12-16 12:26:40 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:216:PID15315:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_CONUS.png
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:220:PID15315:T140704646598272]INFO:Done with plotting routine for region CONUS, took 11.882071 sec.
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:37:PID15315:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:26:41.069442+00:00 UTC
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:61:PID15315:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_CONUS.png
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region CONUS, took 11.467176 sec.
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:26:41.131656+00:00 UTC
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_CONUS.png
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region CONUS, took 11.559314 sec.
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:26:41.191300+00:00 UTC
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:103:PID15315:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:106:PID15315:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:109:PID15315:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:112:PID15315:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:183:PID15315:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:184:PID15315:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:185:PID15315:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:189:PID15315:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:190:PID15315:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:216:PID15316:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_CONUS.png
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:220:PID15316:T140704646598272]INFO:Done with plotting routine for region CONUS, took 11.963804 sec.
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:37:PID15316:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:26:41.771273+00:00 UTC
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:61:PID15316:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:41 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:216:PID15313:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_CONUS.png
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:220:PID15313:T140704646598272]INFO:Done with plotting routine for region CONUS, took 12.508631 sec.
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:37:PID15313:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:26:42.243115+00:00 UTC
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:61:PID15313:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:103:PID15316:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:106:PID15316:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:109:PID15316:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:112:PID15316:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:183:PID15316:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:184:PID15316:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:185:PID15316:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:189:PID15316:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:190:PID15316:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:103:PID15313:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:106:PID15313:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:109:PID15313:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:112:PID15313:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:183:PID15313:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:184:PID15313:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:185:PID15313:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:189:PID15313:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:42 PST:main.plot:plot.py->plot_region:190:PID15313:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_NORTHAMERICA.png
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.176162 sec.
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:26:56.139706+00:00 UTC
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_NORTHAMERICA.png
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.31724 sec.
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:26:56.449295+00:00 UTC
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_NORTHAMERICA.png
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.327182 sec.
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:26:56.518850+00:00 UTC
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:216:PID15315:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_NORTHAMERICA.png
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:220:PID15315:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.484601 sec.
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:37:PID15315:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:26:56.554459+00:00 UTC
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:61:PID15315:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:103:PID15315:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:106:PID15315:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:109:PID15315:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:112:PID15315:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:183:PID15315:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:184:PID15315:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:185:PID15315:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:189:PID15315:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:56 PST:main.plot:plot.py->plot_region:190:PID15315:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:216:PID15316:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_NORTHAMERICA.png
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:220:PID15316:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.356273999999999 sec.
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:37:PID15316:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:26:57.128048+00:00 UTC
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:61:PID15316:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:216:PID15313:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_NORTHAMERICA.png
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:220:PID15313:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 15.234248000000001 sec.
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:37:PID15313:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:26:57.477772+00:00 UTC
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_SOUTHAMERICA.png
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:61:PID15313:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.362408 sec.
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:26:57.502592+00:00 UTC
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:103:PID15316:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:106:PID15316:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:109:PID15316:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:112:PID15316:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:183:PID15316:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:184:PID15316:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:185:PID15316:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:189:PID15316:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:190:PID15316:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_SOUTHAMERICA.png
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.387704 sec.
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:26:57.837383+00:00 UTC
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:103:PID15313:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:106:PID15313:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:109:PID15313:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:112:PID15313:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_SOUTHAMERICA.png
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.404628 sec.
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:26:57.924143+00:00 UTC
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:183:PID15313:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:184:PID15313:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:185:PID15313:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:189:PID15313:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:190:PID15313:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:216:PID15315:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_SOUTHAMERICA.png
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:220:PID15315:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.430565 sec.
+[2023-12-16 12:26:57 PST:main.plot:plot.py->plot_region:37:PID15315:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:26:57.985440+00:00 UTC
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:61:PID15315:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:103:PID15315:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:106:PID15315:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:109:PID15315:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:112:PID15315:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:183:PID15315:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:184:PID15315:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:185:PID15315:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:189:PID15315:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:190:PID15315:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:216:PID15316:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_SOUTHAMERICA.png
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:220:PID15316:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.484153 sec.
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:37:PID15316:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:26:58.612720+00:00 UTC
+[2023-12-16 12:26:58 PST:main.plot:plot.py->plot_region:61:PID15316:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:103:PID15316:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:106:PID15316:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:109:PID15316:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:112:PID15316:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:216:PID15313:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_SOUTHAMERICA.png
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:220:PID15313:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.6869100000000001 sec.
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:37:PID15313:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:26:59.165049+00:00 UTC
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:183:PID15316:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:184:PID15316:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:185:PID15316:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:189:PID15316:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:190:PID15316:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:61:PID15313:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_EUROPE.png
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.710753 sec.
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:26:59.213720+00:00 UTC
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_EUROPE.png
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.72943 sec.
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:26:59.567192+00:00 UTC
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:103:PID15313:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:106:PID15313:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:109:PID15313:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:112:PID15313:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:183:PID15313:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:184:PID15313:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:185:PID15313:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:189:PID15313:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:190:PID15313:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_EUROPE.png
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.706615 sec.
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:26:59.631255+00:00 UTC
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:216:PID15315:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_EUROPE.png
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:220:PID15315:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.698782 sec.
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:37:PID15315:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:26:59.684603+00:00 UTC
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:61:PID15315:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:26:59 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:103:PID15315:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:106:PID15315:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:109:PID15315:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:112:PID15315:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:183:PID15315:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:184:PID15315:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:185:PID15315:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:189:PID15315:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:190:PID15315:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:216:PID15316:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_EUROPE.png
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:220:PID15316:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.68056 sec.
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:37:PID15316:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:27:00.293680+00:00 UTC
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:61:PID15316:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_180000_OCEANIA.png
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.452292 sec.
+[2023-12-16 12:27:00 PST:main:processor.py->_plot_multiprocess_worker:62:PID15312:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:00 PST:main:processor.py->_plot_multiprocess_worker:41:PID15312:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:27:00 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15312:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:27:00.666603+00:00 UTC
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:103:PID15316:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:106:PID15316:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:109:PID15316:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:112:PID15316:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:183:PID15316:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:184:PID15316:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:185:PID15316:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:189:PID15316:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:190:PID15316:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:216:PID15313:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_EUROPE.png
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:220:PID15313:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.573036 sec.
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:37:PID15313:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:27:00.738647+00:00 UTC
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:61:PID15313:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_150000_OCEANIA.png
+[2023-12-16 12:27:00 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.422668 sec.
+[2023-12-16 12:27:00 PST:main:processor.py->_plot_multiprocess_worker:62:PID15314:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:00 PST:main:processor.py->_plot_multiprocess_worker:41:PID15314:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:27:00 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15314:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:27:00.990472+00:00 UTC
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_120000_OCEANIA.png
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.382977 sec.
+[2023-12-16 12:27:01 PST:main:processor.py->_plot_multiprocess_worker:62:PID15311:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:01 PST:main:processor.py->_plot_multiprocess_worker:41:PID15311:T140704646598272]DEBUG:Spinning up plotting/calculating worker process...
+[2023-12-16 12:27:01 PST:main.calc:contrail_calc.py->calculate_contrail_heights:26:PID15311:T140704646598272]INFO:Starting file parsing routine at 2023-12-16 20:27:01.014911+00:00 UTC
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:103:PID15313:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:106:PID15313:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:109:PID15313:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:112:PID15313:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:183:PID15313:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:184:PID15313:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:185:PID15313:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:189:PID15313:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:190:PID15313:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:216:PID15315:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_090000_OCEANIA.png
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:220:PID15315:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.397181 sec.
+[2023-12-16 12:27:01 PST:main:processor.py->_plot_multiprocess_worker:62:PID15315:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:216:PID15316:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_210000_OCEANIA.png
+[2023-12-16 12:27:01 PST:main.plot:plot.py->plot_region:220:PID15316:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.424117 sec.
+[2023-12-16 12:27:01 PST:main:processor.py->_plot_multiprocess_worker:62:PID15316:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:02 PST:main.plot:plot.py->plot_region:216:PID15313:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231216_060000_OCEANIA.png
+[2023-12-16 12:27:02 PST:main.plot:plot.py->plot_region:220:PID15313:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.295503 sec.
+[2023-12-16 12:27:02 PST:main:processor.py->_plot_multiprocess_worker:62:PID15313:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:24 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15312:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:27:24 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15312:T140704646598272]INFO:Parsing time 2023-12-17 03:00:00
+[2023-12-16 12:27:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15314:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:27:27 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15314:T140704646598272]INFO:Parsing time 2023-12-17 00:00:00
+[2023-12-16 12:27:28 PST:main.calc:contrail_calc.py->calculate_contrail_heights:36:PID15311:T140704646598272]INFO:Successfully opened data file
+[2023-12-16 12:27:28 PST:main.calc:contrail_calc.py->calculate_contrail_heights:49:PID15311:T140704646598272]INFO:Parsing time 2023-12-17 06:00:00
+[2023-12-16 12:27:28 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15312:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:27:31 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15312:T140704646598272]INFO:Done, took 31.315343 sec.
+[2023-12-16 12:27:32 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15314:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:27:32.232308+00:00 UTC
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:27:32 PST:main.calc:contrail_calc.py->calculate_contrail_heights:133:PID15311:T140704646598272]INFO:Calculating contrail heights
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:32 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:35 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15314:T140704646598272]INFO:Done, took 34.250207 sec.
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:27:35.431901+00:00 UTC
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:27:35 PST:main.calc:contrail_calc.py->calculate_contrail_heights:167:PID15311:T140704646598272]INFO:Done, took 34.55861 sec.
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID US at 2023-12-16 20:27:35.777191+00:00 UTC
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region CONUS
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:35 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:36 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_CONUS.png
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region CONUS, took 4.904433 sec.
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:27:37.137097+00:00 UTC
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:37 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_NORTHAMERICA.png
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 3.242607 sec.
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:27:40.380047+00:00 UTC
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_CONUS.png
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region CONUS, took 5.143423 sec.
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:27:40.575660+00:00 UTC
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_CONUS.png
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region CONUS, took 4.814199 sec.
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID NA at 2023-12-16 20:27:40.591708+00:00 UTC
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region North America
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:40 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_SOUTHAMERICA.png
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.076579 sec.
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:27:41.456950+00:00 UTC
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:41 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_EUROPE.png
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.060724 sec.
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:37:PID15312:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:27:42.517995+00:00 UTC
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:61:PID15312:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:103:PID15312:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:106:PID15312:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:109:PID15312:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:112:PID15312:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:183:PID15312:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:184:PID15312:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:185:PID15312:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:189:PID15312:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:42 PST:main.plot:plot.py->plot_region:190:PID15312:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_NORTHAMERICA.png
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 3.004004 sec.
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:27:43.580005+00:00 UTC
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_NORTHAMERICA.png
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region NORTHAMERICA, took 3.249977 sec.
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID SA at 2023-12-16 20:27:43.842010+00:00 UTC
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region South America
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:216:PID15312:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_030000_OCEANIA.png
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:220:PID15312:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.347705 sec.
+[2023-12-16 12:27:43 PST:main:processor.py->_plot_multiprocess_worker:62:PID15312:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:43 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_SOUTHAMERICA.png
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.117197 sec.
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:27:44.697552+00:00 UTC
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_SOUTHAMERICA.png
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region SOUTHAMERICA, took 1.119974 sec.
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID EU at 2023-12-16 20:27:44.962313+00:00 UTC
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region Europe
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:44 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_EUROPE.png
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.022721 sec.
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:37:PID15314:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:27:45.720658+00:00 UTC
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:61:PID15314:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_EUROPE.png
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region EUROPE, took 1.03022 sec.
+[2023-12-16 12:27:45 PST:main.plot:plot.py->plot_region:37:PID15311:T140704646598272]INFO:Starting plotting routine for region ID OC at 2023-12-16 20:27:45.992852+00:00 UTC
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:103:PID15314:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:61:PID15311:T140704646598272]INFO:Plotting region Oceania
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:106:PID15314:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:109:PID15314:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:112:PID15314:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:183:PID15314:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:184:PID15314:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:185:PID15314:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:189:PID15314:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:190:PID15314:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:103:PID15311:T140704646598272]DEBUG:Drawing states
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:106:PID15311:T140704646598272]DEBUG:Drawing coastlines
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:109:PID15311:T140704646598272]DEBUG:Drawing borders
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:112:PID15311:T140704646598272]DEBUG:Drawing water
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:183:PID15311:T140704646598272]DEBUG:Drawing colorbar turned ON
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:184:PID15311:T140704646598272]DEBUG:Location = Left of plot
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:185:PID15311:T140704646598272]DEBUG:Tick Label Format = 'FL{x:3.0f}'
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:189:PID15311:T140704646598272]DEBUG:Colorbar label turned ON
+[2023-12-16 12:27:46 PST:main.plot:plot.py->plot_region:190:PID15311:T140704646598272]DEBUG:Label = 'ContrailHeights'
+[2023-12-16 12:27:47 PST:main.plot:plot.py->plot_region:216:PID15314:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_000000_OCEANIA.png
+[2023-12-16 12:27:47 PST:main.plot:plot.py->plot_region:220:PID15314:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.316894 sec.
+[2023-12-16 12:27:47 PST:main:processor.py->_plot_multiprocess_worker:62:PID15314:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:47 PST:main.plot:plot.py->plot_region:216:PID15311:T140704646598272]INFO:Sucessfully saved plot file to plots/GFS_Contrail_Heights_20231217_060000_OCEANIA.png
+[2023-12-16 12:27:47 PST:main.plot:plot.py->plot_region:220:PID15311:T140704646598272]INFO:Done with plotting routine for region OCEANIA, took 1.3047900000000001 sec.
+[2023-12-16 12:27:47 PST:main:processor.py->_plot_multiprocess_worker:62:PID15311:T140704646598272]DEBUG:Worker process spinning down...
+[2023-12-16 12:27:48 PST:main:processor.py->delete_data_files:171:PID15276:T140704646598272]INFO:Deleting data files from defined data directory (/Users/rpurciel/Development/contrail-hunters/new/data)
+[2023-12-16 12:27:48 PST:main:processor.py->delete_data_files:177:PID15276:T140704646598272]INFO:All files deleted.
+[2023-12-16 12:27:48 PST:main:main.py-><module>:52:PID15276:T140704646598272]INFO:CONTRAIL HUNTERS: ALL ROUTINES FINISHED
+[2023-12-16 12:27:48 PST:main:main.py-><module>:53:PID15276:T140704646598272]INFO:Total time: 0 days 00:04:03.927324
+[2023-12-16 12:27:48 PST:main:main.py-><module>:54:PID15276:T140704646598272]INFO:Shutting down...
