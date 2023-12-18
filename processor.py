@@ -54,7 +54,10 @@ def _plot_multiprocess_worker(save_dir: str,
 
 		sel_region = regions_to_plot[region_pos]
 		prog.set_description(f"{file_name}: Plotting region '{sel_region}'", refresh=True)
-		plot_region(save_dir, result, sel_region, config)
+		try:
+			plot_region(save_dir, result, sel_region, config)
+		except:
+			log.fatal(f"Region {sel_region} not plotted, saving for rerun...")
 		prog.update()
 
 	prog.display(f"{file_name}: Finished plotting.", pos=pos)
@@ -141,7 +144,7 @@ class ContrailProcessor:
 		start_time = (now - pd.Timedelta(hours=modelLagHours)).floor(freq="6H")
 		end_time = start_time + pd.Timedelta(hours=self.config['download']['ForecastHours'])
 
-		data_period = pd.period_range(start=start_time, end=end_time, freq=f'{self.config['download']['ForecastTimeIncrements']}H')
+		data_period = pd.period_range(start=start_time, end=end_time, freq=f"{self.config['download']['ForecastTimeIncrements']}H")
 		log.debug(f"Downloading data between {start_time} - {end_time}")
 
 		valid_keys = []
