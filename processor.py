@@ -101,11 +101,11 @@ class ContrailProcessor:
 		self.data_dir = self.config['download']['DataDirPath']
 		self.plot_dir = self.config['plotting']['PlotDirPath']
 
-		if not os.path.exists(data_dir):
-			os.makedirs(data_dir)
+		if not os.path.exists(self.data_dir):
+			os.makedirs(self.data_dir)
 
-		if not os.path.exists(plot_dir):
-			os.makedirs(plot_dir)
+		if not os.path.exists(self.plot_dir):
+			os.makedirs(self.plot_dir)
 
 		#Load in model parameters
 		model_cfg_path = os.path.join(os.getcwd(), self.config['misc']['ModelConfigPath'])
