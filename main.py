@@ -8,7 +8,7 @@ import pandas as pd
 
 from processor import ContrailProcessor
 
-VERSION = "23.12.00_1"
+VERSION = "23.12.00_2"
 #(year).(month).(version in year)_(dev version #)
 
 PATH_TO_CONFIG = "config/config.conf"
@@ -85,4 +85,6 @@ if __name__ == "__main__":
 	if not args.keep_data and not args.static:
 		proc.clean_dir('data')
 		proc.clean_dir('output')
+
+	log.info("END")
 
