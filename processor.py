@@ -101,6 +101,12 @@ class ContrailProcessor:
 		self.data_dir = self.config['download']['DataDirPath']
 		self.plot_dir = self.config['plotting']['PlotDirPath']
 
+		if not os.path.exists(data_dir):
+			os.makedirs(data_dir)
+
+		if not os.path.exists(plot_dir):
+			os.makedirs(plot_dir)
+
 		#Load in model parameters
 		model_cfg_path = os.path.join(os.getcwd(), self.config['misc']['ModelConfigPath'])
 		with open(model_cfg_path, 'rb') as model_cfg:
@@ -244,7 +250,11 @@ class ContrailProcessor:
 		else:
 			archive_name = f"cthrun_{time_str}Z_archive.tar.gz"
 
-		archive_file = os.path.join(self.config['misc']['ArchiveDirPath'], archive_name)
+		archive_dir = self.config['misc']['ArchiveDirPath']
+		if not os.path.exists(archive_dir):
+			os.makedirs(archive_dir)
+
+		archive_file = os.path.join(archive_dir, archive_name)
 
 		with tarfile.open(archive_file, "w:gz") as tar:
 			tar.add(self.plot_dir, arcname=(os.path.basename(self.plot_dir)))

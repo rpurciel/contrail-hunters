@@ -78,6 +78,8 @@ if __name__ == "__main__":
 
 	if not args.keep_data and not args.static:
 		proc.delete_data_files()
+		proc.delete_plots()
+
 
 
 	tot_time = pd.Timestamp.now(tz='UTC') - now
