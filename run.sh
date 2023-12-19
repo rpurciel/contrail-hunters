@@ -9,8 +9,7 @@
 
 # Run GFS upper air winds plotting routine
 echo 'Starting CONTRAIL HUNTERS...'
-conda activate contrail-hunters-linux
-python3 ~/contrail-hunters/main.py
+conda run --no-capture-output -n contrail-hunters-linux python3 main.py
 
 # echo ' '
 # echo 'Sending to WxDash...'
