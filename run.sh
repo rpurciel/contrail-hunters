@@ -9,7 +9,7 @@ exec 1>~/logs/contrail-hunters.log 2>&1
 
 # Run GFS upper air winds plotting routine
 echo 'Starting CONTRAIL HUNTERS...'
-conda run --no-capture-output -n contrail-hunters-linux python3 main.py
+conda run --no-capture-output -n contrail-hunters-linux python3 ~/contrail-hunters/main.py
 
 # echo ' '
 # echo 'Sending to WxDash...'
