@@ -29,6 +29,7 @@ global log
 log = logging.getLogger("main.plot")
 
 def plot_region(save_dir: str,
+                product_info: dict,
 				Calculation: namedtuple,
 				region_id: str,
 				config: dict):
@@ -205,6 +206,9 @@ def plot_region(save_dir: str,
 
 	region_name = region_name.replace(" ", "").upper()
 	valid_time_str = valid_time.strftime('%Y%m%d_%H%M%S%Z')
+
+	model_name = product_info['model'].upper()
+	product = product_info['name']
 	
 	file_name = config['file']['NamingScheme'].format(**locals())
 

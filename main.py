@@ -69,10 +69,16 @@ if __name__ == "__main__":
 		proc.aws_download_multithread()
 
 	proc.clean_idx_files()
-	proc.plot_multiprocess()
+
+	#Calculation/Plotting routines
+
+	proc.plot_mp('MinHeightsNB')
+
+	proc.archive_run()
 
 	if not args.keep_data and not args.static:
 		proc.delete_data_files()
+
 
 	tot_time = pd.Timestamp.now(tz='UTC') - now
 

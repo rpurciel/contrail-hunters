@@ -1,4 +1,5 @@
 import os
+import tarfile
 from time import sleep
 import tomllib
 import datetime
@@ -24,7 +25,7 @@ from tqdm.contrib.concurrent import process_map, thread_map
 import pandas as pd
 
 from plot import plot_region
-from contrail_calc import calculate_contrail_heights
+import contrail_calc
 
 PATH_TO_LOGCFG = "config/logging.conf"
 
@@ -34,11 +35,12 @@ with open(os.path.join(os.getcwd(), PATH_TO_LOGCFG), 'rb') as log_cfg:
 global log
 log = logging.getLogger("main")
 
-def _plot_multiprocess_worker(save_dir: str,
-							  config: dict,
-							  file_and_pos: tuple):
+def _plot_mp_worker(save_dir: str,
+                    product_info: dict,
+				    config: dict,
+				    file_and_pos: tuple):
 
-	log.debug("Spinning up plotting/calculating worker process...")
+	log.debug("Spinning up minimum heights worker process...")
 
 	file = file_and_pos[0]
 	pos = file_and_pos[1]
@@ -47,22 +49,48 @@ def _plot_multiprocess_worker(save_dir: str,
 
 	file_name = os.path.basename(file)
 
-	result = calculate_contrail_heights(file)
+	sel_func = product_info['calcfunc']
 
+	#dynamic selection of calculation function based on config
+	calc_func = getattr(contrail_calc, sel_func)
+	result = calc_func(file)
+
+	failed_regions = []
 	prog = trange(len(regions_to_plot), position=pos, miniters=0, total=len(regions_to_plot)+2, leave=None)
 	for region_pos in prog:
 
 		sel_region = regions_to_plot[region_pos]
 		prog.set_description(f"{file_name}: Plotting region '{sel_region}'", refresh=True)
 		try:
-			plot_region(save_dir, result, sel_region, config)
-		except:
+			plot_region(save_dir, product_info, result, sel_region, config)
+		except Exception as e:
 			log.fatal(f"Region {sel_region} not plotted, saving for rerun...")
+			log.fatal(f"Reason: {e}")
+			failed_regions += [sel_region]
 		prog.update()
 
 	prog.display(f"{file_name}: Finished plotting.", pos=pos)
 
-	log.debug("Worker process spinning down...")
+	#Below code implements retries of failed plots. I don't think it needs to
+	#be implemented ASAP, but it's here.
+
+	# if failed_regions:
+	# 	log.info(f"{len(failed_regions)} regions failed to plot, retrying...")
+	# 	#retry on regions that failed the first time
+	# 	numiters = 1
+	# 	while failed_regions:
+	# 		this_iter = failed_regions.copy()
+
+	# 		for region in this_iter:
+	# 			log.info(f"Retrying plotting of {region} (num tries: {numiters}) (max tries: {maxiters})")
+	# 			try:
+	# 				plot_region(save_dir, result, region, config)
+	# 			except:
+	# 				log.fatal(f"Could not plot region {region}, retrying or stopping...")
+	# 			else:
+	# 				log.info(f"{region} plotted successfully.")
+
+	log.debug("Min heights worker process spinning down...")
 
 class ContrailProcessor:
 
@@ -88,27 +116,11 @@ class ContrailProcessor:
 		self.boto3_client = self.boto3_session.resource("s3", config=botoconfig.Config(signature_version=botocore.UNSIGNED))
 		self.s3fs_client = s3fs.S3FileSystem(anon=True)
 
-		# global log
-		# log = logging.getLogger(__name__)
-		# log_format = logging.Formatter("[%(asctime)s:%(filename)s:%(lineno)s]%(levelname)s:%(message)s",
-		# 						   datefmt="%Y-%m-%d %H:%M:%S %Z",)
+		#Construct namedtuples of product info (for selection in calculating/plotting functions)
+		product_info_path = os.path.join(os.getcwd(), self.config['misc']['ProductConfigPath'])
+		with open(product_info_path, 'rb') as product_info:
+			self.products = tomllib.load(product_info)
 
-		# log_file_time = pd.Timestamp.now(tz='UTC').strftime("%Y%m%d_%H%M%S%f")
-		# log_file_name = f"cth_{log_file_time}.log"
-		# self.log_file = os.path.join(self.config['logging']['LogDirPath'], log_file_name)
-
-		# if self.config['logging']['LogToSTDOUT']:
-		# 	log_channel = logging.StreamHandler(stream=sys.stdout)
-		# else:
-		# 	log_channel = logging.FileHandler(self.log_file)
-
-		# log_channel.setFormatter(log_format)
-		# log.addHandler(log_channel)
-		# log.setLevel(eval(self.config['logging']['LoggingLevel']))
-
-		# log.info(f"Logging file created at {pd.Timestamp.now(tz='UTC')}")
-
-		# print(self.log_file)
 
 	def populate_keys(self, *args):
 
@@ -220,6 +232,26 @@ class ContrailProcessor:
 		os.makedirs(abs_dir)
 		log.info("All files deleted.")
 
+	def archive_run(self, tag=None, include_data=False):
+
+		now = pd.Timestamp.now(tz='UTC')
+		log.info(f"Archiving run at at {now} UTC")
+
+		time_str = now.strftime("%Y%m%d_%H%M%S")
+
+		if tag:
+			archive_name = f"{tag}_cthrun_{time_str}Z_archive.tar.gz"
+		else:
+			archive_name = f"cthrun_{time_str}Z_archive.tar.gz"
+
+		archive_file = os.path.join(self.config['misc']['ArchiveDirPath'], archive_name)
+
+		with tarfile.open(archive_file, "w:gz") as tar:
+			tar.add(self.plot_dir, arcname=(os.path.basename(self.plot_dir)))
+			if include_data:
+				tar.add(self.data_dir, arcname=(os.path.join("data", os.path.basename(self.data_dir))))
+
+
 	def aws_download_multithread(self):
 		'''
 		Thin wrapper for multithreaded downloading.
@@ -260,14 +292,19 @@ class ContrailProcessor:
 			log.fatal(e)
 
 
-
 	#Plotting routines
 
-	def plot_multiprocess(self):
+	def plot_mp(self, product_id: str):
+
+		sel_product = self.products['products'][product_id][0]
+		if not sel_product:
+			raise NotImplementedError("Specified product was not found.")
+
+		out_dir = os.path.join(self.plot_dir, sel_product['dirname'])
 		
 		tqdm.set_lock(RLock())
 		p = Pool(initializer=tqdm.set_lock, initargs=(tqdm.get_lock(),))
-		p.map(partial(_plot_multiprocess_worker, self.plot_dir, self.config), zip(self.data_files, range(1, len(self.data_files)+1, 1)))
+		p.map(partial(_plot_mp_worker, out_dir, sel_product, self.config), zip(self.data_files, range(1, len(self.data_files)+1, 1)))
 
 	
 

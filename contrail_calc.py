@@ -20,7 +20,7 @@ with open(os.path.join(os.getcwd(), PATH_TO_LOGCFG), 'rb') as log_cfg:
 global log
 log = logging.getLogger("main.calc")
 
-def calculate_contrail_heights(data_file):
+def calculate_min_contrail_heights(data_file):
 
 	now = pd.Timestamp.now(tz='UTC')
 	log.info(f"Starting file parsing routine at {now} UTC")
