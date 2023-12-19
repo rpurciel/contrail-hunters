@@ -50,11 +50,11 @@ if __name__ == "__main__":
 
 	if args.clean_plots:
 		log.info("Cleaning old plots")
-		proc.delete_plots()
+		proc.clean_dir('output')
 
 	if args.clean_data:
 		log.info("Cleaning old data")
-		proc.delete_data_files()
+		proc.clean_dir('data')
 		
 	if 'time' in args:
 		time = pd.Timestamp(year=int(args.time[0]), month=int(args.time[1]), day=int(args.time[2]), hour=int(args.time[3]), tz='UTC')
@@ -71,19 +71,18 @@ if __name__ == "__main__":
 	proc.clean_idx_files()
 
 	#Calculation/Plotting routines
-
 	proc.plot_mp('MinHeightsNB')
-
-	proc.archive_run()
-
-	if not args.keep_data and not args.static:
-		proc.delete_data_files()
-		proc.delete_plots()
-
-
 
 	tot_time = pd.Timestamp.now(tz='UTC') - now
 
 	log.info("CONTRAIL HUNTERS: ALL ROUTINES FINISHED")
 	log.info(f"Total time: {tot_time}")
 	log.info("Shutting down...")
+
+	#End of run utils
+	proc.archive_run()
+
+	if not args.keep_data and not args.static:
+		proc.clean_dir('data')
+		proc.clean_dir('output')
+

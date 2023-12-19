@@ -1,6 +1,5 @@
 import os
 import tarfile
-from time import sleep
 import tomllib
 import datetime
 import logging
@@ -14,6 +13,7 @@ from collections import namedtuple
 import warnings
 import glob
 import shutil
+from pathlib import Path
 warnings.filterwarnings('ignore')
 
 import s3fs
@@ -100,6 +100,7 @@ class ContrailProcessor:
 
 		self.data_dir = self.config['download']['DataDirPath']
 		self.plot_dir = self.config['plotting']['PlotDirPath']
+		self.archive_dir = self.config['misc']['ArchiveDirPath']
 
 		if not os.path.exists(self.data_dir):
 			os.makedirs(self.data_dir)
@@ -222,21 +223,47 @@ class ContrailProcessor:
 			for file in files:
 				os.remove(file)
 
-	def delete_data_files(self):
+	def clean_dir(self, id_or_path):
 
-		abs_dir = os.path.join(os.getcwd(), self.data_dir)
-		log.info(f"Deleting data files from defined data directory ({abs_dir})")
-		shutil.rmtree(abs_dir)
-		os.makedirs(abs_dir)
-		log.info("All files deleted.")
+		if id_or_path == "data":
+			path = self.data_dir
+		elif id_or_path == "output":
+			path = self.plot_dir
+		elif id_or_path == "archive":
+			path = self.archive_dir
+		else:
+			path = id_or_path
+			if not os.path.exists(path):
+				raise ValueError("Path is not valid")
 
-	def delete_plots(self):
+		abs_dir = os.path.join(os.getcwd(), path)
+		log.info(f"Deleting files from selected directory ({abs_dir})")
 
-		abs_dir = os.path.join(os.getcwd(), self.plot_dir)
-		log.info(f"Deleting plots from defined plot directory ({abs_dir})")
-		shutil.rmtree(abs_dir)
-		os.makedirs(abs_dir)
-		log.info("All files deleted.")
+		if abs_dir[-1:] == "/":
+			abs_dir = abs_dir[:-1]
+
+		if Path(abs_dir).is_symlink():
+			linked_dir = os.readlink(abs_dir) + "/"
+		elif Path(abs_dir).is_dir():
+			linked_dir = abs_dir + "/"
+		else:
+			raise ValueError("Path must be a directory")
+
+		files = glob.glob(linked_dir + "*", recursive=True)
+		log.info(f"Found {len(files)} tagged for deletion")
+
+		for file in files:
+			if file == linked_dir:
+				pass
+			else:
+				if Path(file).is_file():
+					log.debug(f"Removed file {file}")
+					os.remove(file)
+				else:
+					log.debug(f"Removed directory {file} (and files/dirs within)")
+					shutil.rmtree(file)
+
+		log.info(f"All files in {abs_dir} deleted. ({len(files)})")
 
 	def archive_run(self, tag=None, include_data=False):
 
