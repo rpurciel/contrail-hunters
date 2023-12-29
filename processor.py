@@ -316,9 +316,12 @@ class ContrailProcessor:
 
 		for file in files_to_transfer:
 			file_name = os.path.basename(file)
-			with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1, desc=file_name, ascii=" ▖▘▝▗▚▞█", leave=None) as progress:
-				scp = SCPClient(ssh.get_transport(), progress=progress)
-				scp.put(file, remote_path='/graphics')
+			try:
+				with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1, desc=file_name, ascii=" ▖▘▝▗▚▞█", leave=None) as progress:
+					scp = SCPClient(ssh.get_transport(), progress=progress)
+					scp.put(file, remote_path='graphics/')
+			except Exception as e:
+				print(e)
 
 	def aws_download_multithread(self):
 		'''
