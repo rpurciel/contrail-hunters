@@ -23,6 +23,8 @@ import botocore.config as botoconfig
 from tqdm.auto import tqdm, trange
 from tqdm.contrib.concurrent import process_map, thread_map
 import pandas as pd
+from paramiko import SSHClient
+from scp import SCPClient
 
 from plot import plot_region
 import contrail_calc
@@ -268,7 +270,7 @@ class ContrailProcessor:
 	def archive_run(self, tag=None, include_data=False):
 
 		now = pd.Timestamp.now(tz='UTC')
-		log.info(f"Archiving run at at {now} UTC")
+		log.info(f"Archiving run at {now} UTC")
 
 		time_str = now.strftime("%Y%m%d_%H%M%S")
 
@@ -288,6 +290,35 @@ class ContrailProcessor:
 			if include_data:
 				tar.add(self.data_dir, arcname=(os.path.join("data", os.path.basename(self.data_dir))))
 
+	def send_files_to_server(self):
+
+		now = pd.Timestamp.now(tz='UTC')
+		log.info(f"Transferring files to server at {now} UTC")
+		log.info(f"Address = {self.config['connection']['ServerName']}")
+
+		abs_path = os.path.join(os.getcwd(), self.plot_dir)
+
+		output_files = glob.glob(abs_path + "/**", recursive=True)
+
+		files_to_transfer = []
+		for file in output_files:
+			if file == abs_path:
+				pass
+			else:
+				if Path(file).is_file():
+					files_to_transfer += [file]
+				else:
+					pass
+
+		ssh = SSHClient()
+		ssh.load_system_host_keys()
+		ssh.connect(self.config['connection']['ServerName']+":22")
+
+		for file in files_to_transfer:
+			file_name = os.path.basename(file)
+			with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1, desc=file_name, ascii=" ▖▘▝▗▚▞█", leave=None) as progress:
+				scp = SCPClient(ssh.get_transport(), progress=progress)
+				scp.put(file, f'/graphics/{file_name}')
 
 	def aws_download_multithread(self):
 		'''

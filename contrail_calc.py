@@ -62,7 +62,8 @@ def calculate_min_contrail_heights(data_file):
 	#Creating a dummy array of same size
 	arr = np.zeros(tmp.shape)
 	z = [] 
-	for element in range(len(press)):
+
+	for element in range(len(press)): #
 		z.append(arr[element,:,:] + press[element])			
 	#Stack the list of arrays into master array
 	arr_final = np.dstack(z)

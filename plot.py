@@ -77,15 +77,19 @@ def plot_region(save_dir: str,
 	#palette = copy(plt.get_cmap("Set1")) #Copying the color map to modify it
 
 	palette, palette_norm = from_levels_and_colors(levels, tuple(config['plotting']['colors']['ColorPallete']))
-	palette.set_under(config['plotting']['colors']['BelowMinHeightColor']) #Creating White for anything below 15000
-	palette.set_over(config['plotting']['colors']['AboveMaxHeightColor']) #Creating White for anything above 55000
 	
 	contrail_heights_plotted = ax.contourf(long, lat, contrail_heights, 
 										   levels = levels, cmap = palette, 
 										   extend = "both", vmin = vmin, 
-										   vmax = vmax, alpha = .7, 
+										   vmax = vmax, alpha = 1, 
 										   transform=ccrs.PlateCarree(),
 										   transform_first = True)
+
+	# ax.set_facecolor(config['plotting']['colors']['BelowMinHeightColor'])
+
+	contrail_heights_plotted.cmap.set_under(config['plotting']['colors']['BelowMinHeightColor']) #Creating White for anything below 15000
+	contrail_heights_plotted.cmap.set_over(config['plotting']['colors']['AboveMaxHeightColor']) #Creating White for anything above 55000
+	contrail_heights_plotted.changed()
 	
 	# Add lat/lon grids
 	gridlines = ax.gridlines(linewidth=.8, linestyle='--', 
