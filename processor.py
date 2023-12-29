@@ -312,7 +312,7 @@ class ContrailProcessor:
 
 		ssh = SSHClient()
 		ssh.load_system_host_keys()
-		ssh.connect(self.config['connection']['ServerName']+":22")
+		ssh.connect(self.config['connection']['ServerName'], username=self.config['connection']['UserName'])
 
 		for file in files_to_transfer:
 			file_name = os.path.basename(file)
