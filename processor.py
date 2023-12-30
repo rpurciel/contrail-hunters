@@ -317,7 +317,7 @@ class ContrailProcessor:
 
 		connection_name = f"{self.config['connection']['UserName']}@{self.config['connection']['ServerName']}"
 
-		with tqdm(miniters=1, desc=file_name, ascii=" >-", leave=None) as progress:
+		with tqdm(miniters=1, desc=connection_name, ascii=" >-", leave=None) as progress:
 			for file in files_to_transfer:
 				file_name = os.path.basename(file)
 				progress.set_description(desc=f'{connection_name}:{file_name}')
