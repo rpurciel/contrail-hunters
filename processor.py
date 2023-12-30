@@ -313,15 +313,21 @@ class ContrailProcessor:
 		ssh = SSHClient()
 		ssh.load_system_host_keys()
 		ssh.connect(self.config['connection']['ServerName'], username=self.config['connection']['UserName'])
+		scp = SCPClient(ssh.get_transport())
 
-		for file in files_to_transfer:
-			file_name = os.path.basename(file)
-			try:
-				with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1, desc=file_name, ascii=" ▖▘▝▗▚▞█", leave=None) as progress:
-					scp = SCPClient(ssh.get_transport(), progress=progress)
+		connection_name = f"{self.config['connection']['UserName']}@{self.config['connection']['ServerName']}"
+
+		with tqdm(miniters=1, desc=file_name, ascii=" >-", leave=None) as progress:
+			for file in files_to_transfer:
+				file_name = os.path.basename(file)
+				progress.set_description(desc=f'{connection_name}:{file_name}')
+				try:
 					scp.put(file, remote_path='graphics/')
-			except Exception as e:
-				print(e)
+				except Exception as e:
+					print(e)
+				progress.update()
+
+			prog.display(f"{connection_name}: Sending all files finished.", pos=pos)
 
 	def aws_download_multithread(self):
 		'''
