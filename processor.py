@@ -350,7 +350,7 @@ class ContrailProcessor:
 				else:
 					pass
 
-		with tqdm(miniters=0, mtotal=len(files_to_transfer), desc=connection_name,  ascii=" >-", leave=None) as progress:
+		with tqdm(miniters=0, mtotal=len(files_to_transfer), desc=self.connection_name,  ascii=" >-", leave=None) as progress:
 			for file in files_to_transfer:
 				file_name = os.path.basename(file)
 				remote_path = os.path.join(self.config['connection']['RemoteDir'], file_name)
