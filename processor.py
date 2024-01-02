@@ -318,7 +318,7 @@ class ContrailProcessor:
 
 		remote_dir = 'grahpics/'
 
-		files = sftp.listdir(remote_dir)
+		files = self.sftp.listdir(remote_dir)
 
 		for file in files:
 			if file.endswith('.png'):
