@@ -319,7 +319,7 @@ class ContrailProcessor:
 		files = self.sftp.listdir(self.config['connection']['RemoteDir'])
 
 		for file in files:
-			if file.endswith('.png'):
+			if file.endswith('.png') or file.endswith('.log'):
 				file_path = os.path.join(self.config['connection']['RemoteDir'], file)
 				self.sftp.remove(file_path)
 				log.info(f"{self.connection_name}: Removed {file} at {file_path}")
