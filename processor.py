@@ -353,7 +353,7 @@ class ContrailProcessor:
 		with tqdm(miniters=0, mtotal=len(files_to_transfer), desc=connection_name,  ascii=" >-", leave=None) as progress:
 			for file in files_to_transfer:
 				file_name = os.path.basename(file)
-				remote_path = os.path.join(remote_dir = self.config['connection']['RemoteDir'], file_name)
+				remote_path = os.path.join(self.config['connection']['RemoteDir'], file_name)
 				progress.set_description(desc=f'{self.connection_name}:{file_name}')
 				try:
 					self.sftp.put(file, remote_path)
