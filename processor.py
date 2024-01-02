@@ -350,7 +350,7 @@ class ContrailProcessor:
 				else:
 					pass
 
-		with tqdm(miniters=0, total=len(files_to_transfer), desc=f'{self.connection_name}: Transferring',  ascii=" >-", leave=None) as progress:
+		with tqdm(miniters=0, total=len(files_to_transfer), desc=f'{self.connection_name}: Transferring',  ascii=" >>>-", leave=None) as progress:
 			for file in files_to_transfer:
 				file_name = os.path.basename(file)
 				remote_path = os.path.join(self.config['connection']['RemoteDir'], file_name)
@@ -360,7 +360,7 @@ class ContrailProcessor:
 					print(e)
 				progress.update()
 
-			progress.display(f"{self.connection_name}: Sending all files finished.", pos=pos)
+			progress.display(f"{self.connection_name}: Sending all files finished.")
 
 	def send_files_to_server_scp(self):
 
