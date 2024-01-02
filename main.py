@@ -80,7 +80,8 @@ if __name__ == "__main__":
 	log.info("Shutting down...")
 
 	#End of run utils
-	proc.send_files_to_server()
+	proc.remove_old_files_from_server()
+	proc.send_files_to_server_sftp()
 	proc.archive_run()
 
 	if not args.keep_data and not args.static:

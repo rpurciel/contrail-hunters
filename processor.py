@@ -120,6 +120,8 @@ class ContrailProcessor:
 		self.bucket = self.sel_model['bucket_name']
 		self.key_pattern = self.sel_model['key_pattern']
 
+		self.ssh_connection = False
+
 		#Load download interfaces
 		self.boto3_session = boto3.Session()
 		self.boto3_client = self.boto3_session.resource("s3", config=botoconfig.Config(signature_version=botocore.UNSIGNED))
@@ -290,11 +292,87 @@ class ContrailProcessor:
 			if include_data:
 				tar.add(self.data_dir, arcname=(os.path.join("data", os.path.basename(self.data_dir))))
 
-	def send_files_to_server(self):
+	def _init_ssh_connection(self):
+		log.info("Initiating SSH connection to server")
+		self.ssh = SSHClient()
+		self.ssh.load_system_host_keys()
+		self.ssh.connect(self.config['connection']['ServerName'], username=self.config['connection']['UserName'])
+		log.info("Done")
+
+		log.info("Initiating SFTP client through SSH connection")
+		self.sftp = self.ssh.open_sftp()
+		log.info("Done")
+
+		self.connection_name = f"{self.config['connection']['UserName']}@{self.config['connection']['ServerName']}"
+
+		return True
+
+	def remove_old_files_from_server(self):
+
+		if not self.ssh_connection:
+			self.ssh_connection = self._init_ssh_connection()
+
+		now = pd.Timestamp.now(tz='UTC')
+		log.info(f"Removing old files from server at {now} UTC")
+		log.info(f"Address = {self.connection_name}")
+
+		remote_dir = 'grahpics/'
+
+		files = sftp.listdir(remote_dir)
+
+		for file in files:
+			if file.endswith('.png'):
+				file_path = os.path.join(remote_dir, file)
+				self.sftp.remove(file_path)
+				log.info(f"{self.connection_name}: Removed {file} at {file_path}")
+			else:
+				log.info(f"{self.connection_name}: File {file} in remote dir not removed")
+
+	def send_files_to_server_sftp(self):
+
+		if not self.ssh_connection:
+			self.ssh_connection = self._init_ssh_connection()
 
 		now = pd.Timestamp.now(tz='UTC')
 		log.info(f"Transferring files to server at {now} UTC")
-		log.info(f"Address = {self.config['connection']['ServerName']}")
+		log.info("Via: SFTP")
+		log.info(f"Address = {self.connection_name}")
+
+		abs_path = os.path.join(os.getcwd(), self.plot_dir)
+
+		output_files = glob.glob(abs_path + "/**", recursive=True)
+
+		files_to_transfer = []
+		for file in output_files:
+			if file == abs_path:
+				pass
+			else:
+				if Path(file).is_file():
+					files_to_transfer += [file]
+				else:
+					pass
+
+		remote_dir = 'grahpics/'
+
+		with tqdm(miniters=0, mtotal=len(files_to_transfer), desc=connection_name,  ascii=" >-", leave=None) as progress:
+			for file in files_to_transfer:
+				file_name = os.path.basename(file)
+				remote_path = os.path.join(remote_dir, file_name)
+				progress.set_description(desc=f'{self.connection_name}:{file_name}')
+				try:
+					self.sftp.put(file, remote_path)
+				except Exception as e:
+					print(e)
+				progress.update()
+
+			prog.display(f"{self.connection_name}: Sending all files finished.", pos=pos)
+
+	def send_files_to_server_scp(self):
+
+		now = pd.Timestamp.now(tz='UTC')
+		log.info(f"Transferring files to server at {now} UTC")
+		log.info("Via: SCP")
+		log.info(f"Address = {self.connection_name}")
 
 		abs_path = os.path.join(os.getcwd(), self.plot_dir)
 
@@ -317,7 +395,7 @@ class ContrailProcessor:
 
 		connection_name = f"{self.config['connection']['UserName']}@{self.config['connection']['ServerName']}"
 
-		with tqdm(miniters=1, desc=connection_name, ascii=" >-", leave=None) as progress:
+		with tqdm(miniters=0, mtotal=len(files_to_transfer), desc=connection_name,  ascii=" >-", leave=None) as progress:
 			for file in files_to_transfer:
 				file_name = os.path.basename(file)
 				progress.set_description(desc=f'{connection_name}:{file_name}')
