@@ -320,7 +320,7 @@ class ContrailProcessor:
 
 		for file in files:
 			if file.endswith('.png'):
-				file_path = os.path.join(remote_dir, file)
+				file_path = os.path.join(self.config['connection']['RemoteDir'], file)
 				self.sftp.remove(file_path)
 				log.info(f"{self.connection_name}: Removed {file} at {file_path}")
 			else:
@@ -360,7 +360,7 @@ class ContrailProcessor:
 					print(e)
 				progress.update()
 
-			prog.display(f"{self.connection_name}: Sending all files finished.", pos=pos)
+			progress.display(f"{self.connection_name}: Sending all files finished.", pos=pos)
 
 	def send_files_to_server_scp(self):
 
