@@ -316,9 +316,7 @@ class ContrailProcessor:
 		log.info(f"Removing old files from server at {now} UTC")
 		log.info(f"Address = {self.connection_name}")
 
-		remote_dir = 'grahpics/'
-
-		files = self.sftp.listdir(remote_dir)
+		files = self.sftp.listdir(self.config['connection']['RemoteDir'])
 
 		for file in files:
 			if file.endswith('.png'):
@@ -352,12 +350,10 @@ class ContrailProcessor:
 				else:
 					pass
 
-		remote_dir = 'grahpics/'
-
 		with tqdm(miniters=0, mtotal=len(files_to_transfer), desc=connection_name,  ascii=" >-", leave=None) as progress:
 			for file in files_to_transfer:
 				file_name = os.path.basename(file)
-				remote_path = os.path.join(remote_dir, file_name)
+				remote_path = os.path.join(remote_dir = self.config['connection']['RemoteDir'], file_name)
 				progress.set_description(desc=f'{self.connection_name}:{file_name}')
 				try:
 					self.sftp.put(file, remote_path)
