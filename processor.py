@@ -58,7 +58,7 @@ def _plot_mp_worker(save_dir: str,
 	result = calc_func(file)
 
 	failed_regions = []
-	prog = trange(len(regions_to_plot), position=pos, miniters=0, total=len(regions_to_plot)+2, leave=None)
+	prog = trange(len(regions_to_plot), position=pos, miniters=0, total=len(regions_to_plot), leave=None)
 	for region_pos in prog:
 
 		sel_region = regions_to_plot[region_pos]
@@ -390,7 +390,7 @@ class ContrailProcessor:
 
 		connection_name = f"{self.config['connection']['UserName']}@{self.config['connection']['ServerName']}"
 
-		with tqdm(miniters=0, mtotal=len(files_to_transfer), desc=connection_name,  ascii=" >-", leave=None) as progress:
+		with tqdm(miniters=0, total=len(files_to_transfer), desc=f'{self.connection_name}: Transferring',  ascii=" >>>-", leave=None) as progress:
 			for file in files_to_transfer:
 				file_name = os.path.basename(file)
 				progress.set_description(desc=f'{connection_name}:{file_name}')
@@ -419,7 +419,7 @@ class ContrailProcessor:
 									 save_dir: str,
 									 s3_file: str,
 									 file_name: str, 
-									 progress_pos: int):
+									 progress_pos: int) -> None:
 
 		log.debug("Spinning up download thread...")
 

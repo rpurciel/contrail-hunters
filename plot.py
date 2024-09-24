@@ -8,7 +8,9 @@ warnings.filterwarnings('ignore')
 
 import numpy as np
 import pandas as pd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
+import matplotlib.patches as patches
 from matplotlib import cm
 from matplotlib.colors import from_levels_and_colors, to_rgba
 import matplotlib.patheffects as PathEffects
@@ -20,6 +22,8 @@ from cartopy.util import add_cyclic_point
 from cartopy.feature import NaturalEarthFeature
 from PIL import Image
 
+from __internal_funcs import plot_towns, draw_logo
+
 PATH_TO_LOGCFG = "config/logging.conf"
 
 with open(os.path.join(os.getcwd(), PATH_TO_LOGCFG), 'rb') as log_cfg:
@@ -27,6 +31,8 @@ with open(os.path.join(os.getcwd(), PATH_TO_LOGCFG), 'rb') as log_cfg:
 
 global log
 log = logging.getLogger("main.plot")
+
+mpl.use('agg')
 
 def plot_region(save_dir: str,
                 product_info: dict,
@@ -77,19 +83,26 @@ def plot_region(save_dir: str,
 	#palette = copy(plt.get_cmap("Set1")) #Copying the color map to modify it
 
 	palette, palette_norm = from_levels_and_colors(levels, tuple(config['plotting']['colors']['ColorPallete']))
+
+	palette.set_under(config['plotting']['colors']['BelowMinHeightColor']) #Creating White for anything below 15000
+	palette.set_over(config['plotting']['colors']['AboveMaxHeightColor']) #Creating White for anything above 55000
+	# palette.set_bad('black')
 	
-	contrail_heights_plotted = ax.contourf(long, lat, contrail_heights, 
-										   levels = levels, cmap = palette, 
-										   extend = "both", vmin = vmin, 
-										   vmax = vmax, alpha = 1, 
+	contrail_heights_plotted = ax.contourf(long, lat, 
+	                                       contrail_heights, 
+										   levels = levels, 
+										   cmap = palette, 
+										   extend = "both", 
+										   vmin = vmin, 
+										   vmax = vmax, 
+										   alpha = 1, 
 										   transform=ccrs.PlateCarree(),
-										   transform_first = True)
+										   transform_first = True,
+										   zorder=1)
 
 	# ax.set_facecolor(config['plotting']['colors']['BelowMinHeightColor'])
 
-	contrail_heights_plotted.cmap.set_under(config['plotting']['colors']['BelowMinHeightColor']) #Creating White for anything below 15000
-	contrail_heights_plotted.cmap.set_over(config['plotting']['colors']['AboveMaxHeightColor']) #Creating White for anything above 55000
-	contrail_heights_plotted.changed()
+	# contrail_heights_plotted.changed()
 	
 	# Add lat/lon grids
 	gridlines = ax.gridlines(linewidth=.8, linestyle='--', 
@@ -101,6 +114,16 @@ def plot_region(save_dir: str,
 	gridlines.ylines = True
 	gridlines.top_labels = False 
 	gridlines.right_labels = False 
+
+	xmin, xmax = ax.get_xlim()
+	ymin, ymax = ax.get_ylim()
+	xy = (xmin,ymin)
+	width = xmax - xmin
+	height = ymax - ymin
+
+	# create the patch and place it in the back of countourf (zorder!)
+	p = patches.Rectangle(xy, width, height, hatch='x', fill=None, zorder=-10)
+	ax.add_patch(p)
 
 	if config['plotting']['geography']['Visible']:
 		if config['plotting']['geography']['DrawStates']:
@@ -117,49 +140,6 @@ def plot_region(save_dir: str,
 			log.debug("Drawing water")
 	else:
 		log.debug("Geography drawing turned OFF")
-
-	# # Master city file
-	# master_city_list = pd.read_csv(os.path.join(ancillary_path, "LargeCities.csv"), sep=',', header=0)
-
-	# # Lists for the lat & long coordinates for points to be plotted on the map.
-	# selected_city_list = master_city_list.loc[master_city_list['lat'] < extent[3]]
-	# selected_city_list = selected_city_list.loc[selected_city_list['lat'] > extent[2]]
-	# selected_city_list = selected_city_list.loc[selected_city_list['lng'] < extent[1]] 
-	# selected_city_list = selected_city_list.loc[selected_city_list['lng'] > extent[0]]
-	
-	# selected_cities_x_axis_list = selected_city_list.lng.to_numpy()
-	# selected_cities_y_axis_list = selected_city_list.lat.to_numpy()
-	# selected_cities_labels_list = selected_city_list.city_ascii.to_numpy()
-	# # ?? why
-	# # lab_xpoints = selected_cities_x_axis
-	# # lab_ypoints = selected_cities_y_axis
-	
-	# text_label_padding = .44 # Padding for text labels
-	
-	# # Plot city points/selected_cities_labels
-	# for (g,h,i,j,k) in zip(selected_cities_x_axis_list, 
-	# 					   selected_cities_y_axis_list, 
-	# 					   selected_cities_x_axis_list, 
-	# 					   selected_cities_y_axis_list, 
-	# 					   selected_cities_labels_list):
-	
-	#	 # Plotting the points
-	#	 selected_city_points = ax.scatter(i, j, color='white', zorder=12,
-	#					   s=90, marker='*', transform=crs.PlateCarree())
-	#	 selected_city_points = ax.scatter(i, j, color='k', zorder=12,
-	#					   s=60, marker='*', transform=crs.PlateCarree())
-
-	#	 selected_city_label_i = g + text_label_padding
-	#	 selected_city_label_j = h + text_label_padding
-
-	#	 selected_city_labels = ax.text(selected_city_label_i, 
-	#	 			   selected_city_label_j, k, zorder=12,
-	#					horizontalalignment='left', color='k', fontsize=7, alpha=.9,
-	#					fontweight = 'semibold', transform=ccrs.PlateCarree())
-	#	 selected_city_labels.set_path_effects([PathEffects.withStroke(linewidth=.5, foreground='w')])
-		
-	# Plot title and headers
-
 
 	ttl_init_str = init_time.strftime("%H:00 UTC %b %d %Y")
 	fcasthr = str(fcst_hr)
@@ -194,19 +174,22 @@ def plot_region(save_dir: str,
 			log.debug("Colorbar label turned ON")
 			log.debug(f"Label = '{config['plotting']['colors']['colorbar']['Label']}'")
 	
-	# Add logo to corner
-	cwd = os.getcwd()
-	ancillary_dir = os.path.join(cwd, config['misc']['AncillaryDirPath'])
-	logo_sized = f"logo{config['plotting']['logo']['SizePix']}.png"
-	logo = os.path.join(ancillary_dir, logo_sized)
-	img = Image.open(logo)
-	# ax.imshow(img, extent=(0.4, 0.6, 5, 5), zorder=15, alpha=cfg.DEF_LOGO_ALPHA)
+	# # Add logo to corner
+	# cwd = os.getcwd()
+	# ancillary_dir = os.path.join(cwd, config['misc']['AncillaryDirPath'])
+	# logo_sized = f"logo{config['plotting']['logo']['SizePix']}.png"
+	# logo = os.path.join(ancillary_dir, logo_sized)
+	# img = Image.open(logo)
+	# # ax.imshow(img, extent=(0.4, 0.6, 5, 5), zorder=15, alpha=cfg.DEF_LOGO_ALPHA)
 
-	if region_id == 'US':
-		proj_padding = 50
-	else:
-		proj_padding = 0
-	fig.figimage(img, xo=ax.bbox.xmin + config['plotting']['logo']['MarginX'], yo=ax.bbox.ymin + (config['plotting']['logo']['MarginY'] + proj_padding), zorder=15, alpha=config['plotting']['logo']['Alpha'])
+	# if region_id == 'US':
+	# 	proj_padding = 50
+	# else:
+	# 	proj_padding = 0
+	# fig.figimage(img, xo=ax.bbox.xmin + config['plotting']['logo']['MarginX'], yo=ax.bbox.ymin + (config['plotting']['logo']['MarginY'] + proj_padding), zorder=15, alpha=config['plotting']['logo']['Alpha'])
+
+	draw_logo(ax, f'logo{config['plotting']['logo']['SizePix']}.png', scale=5)
+	plot_towns(ax, extent[0:2], extent[2:], scale_rank=config['plotting']['geography']['CityRankingFactor'], zorder=15)
 
 	region_name = region_name.replace(" ", "").upper()
 	valid_time_str = valid_time.strftime('%Y%m%d_%H%M%S%Z')

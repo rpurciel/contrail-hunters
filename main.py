@@ -8,8 +8,8 @@ import pandas as pd
 
 from processor import ContrailProcessor
 
-VERSION = "24.01.01"
-#(year).(month).(version in year)_(dev version #)
+VERSION = "01.24.09"
+#(version in year).(year).(month)_(dev version #)
 
 PATH_TO_CONFIG = "config/config.conf"
 PATH_TO_LOGCFG = "config/logging.conf"
@@ -21,10 +21,11 @@ global log
 log = logging.getLogger("main")
 
 parser = argparse.ArgumentParser(description=f'Run CONTRAIL HUNTERS v. {VERSION}')
-parser.add_argument('-s', '--static', help='load files from data directory instead of downloading', action='store_true')
-parser.add_argument('-cd', '--clean_data', help='remove old data at the beginning of processing', action='store_true')
-parser.add_argument('-cpl', '--clean_plots', help='remove old plots at the beginning of processing', action='store_true')
-parser.add_argument('-k', '--keep_data', help='prevent deletion of data files from directory when done processing', action='store_true')
+parser.add_argument('--load-static-data', help='load files from data directory instead of downloading', action='store_true', dest='static')
+parser.add_argument('--local-only', help='run program locally, do not connect to destination server', action='store_true', dest='local')
+parser.add_argument('--clean-data-before-run', help='remove old data at the beginning of processing', action='store_true', dest='clean_data')
+parser.add_argument('--clean-plots-before-run', help='remove old plots at the beginning of processing', action='store_true', dest='clean_plots')
+parser.add_argument('--keep-data-after-run', help='prevent deletion of data files from directory when done processing', action='store_true', dest='keep_data')
 parser.add_argument('--time', help='specifiy a time (UTC) to start the forecast period from', nargs=4, default=argparse.SUPPRESS, metavar=('yyyy', 'mm', 'dd', 'hh'), type=int)
 
 if __name__ == "__main__":
@@ -72,6 +73,8 @@ if __name__ == "__main__":
 
 	#Calculation/Plotting routines
 	proc.plot_mp('MinHeightsNB')
+	proc.plot_mp('MinHeightsLB')
+	proc.plot_mp('MinHeightsHB')
 
 	tot_time = pd.Timestamp.now(tz='UTC') - now
 
@@ -80,8 +83,9 @@ if __name__ == "__main__":
 	log.info("Shutting down...")
 
 	#End of run utils
-	proc.remove_old_files_from_server()
-	proc.send_files_to_server_sftp()
+	if not args.local:
+		proc.remove_old_files_from_server()
+		proc.send_files_to_server_sftp()
 	proc.archive_run()
 
 	if not args.keep_data and not args.static:
