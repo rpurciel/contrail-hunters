@@ -86,11 +86,12 @@ if __name__ == "__main__":
 	if not args.local:
 		proc.remove_old_files_from_server()
 		proc.send_files_to_server_sftp()
-	proc.archive_run()
 
 	if not args.keep_data and not args.static:
 		proc.clean_dir('data')
 		proc.clean_dir('output')
+
+	proc.archive_run()
 
 	log.info("END")
 

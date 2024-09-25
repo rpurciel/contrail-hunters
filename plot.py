@@ -188,7 +188,7 @@ def plot_region(save_dir: str,
 	# 	proj_padding = 0
 	# fig.figimage(img, xo=ax.bbox.xmin + config['plotting']['logo']['MarginX'], yo=ax.bbox.ymin + (config['plotting']['logo']['MarginY'] + proj_padding), zorder=15, alpha=config['plotting']['logo']['Alpha'])
 
-	draw_logo(ax, f'logo{config['plotting']['logo']['SizePix']}.png', scale=5)
+	draw_logo(ax, f"logo{config['plotting']['logo']['SizePix']}.png", scale=5)
 	plot_towns(ax, extent[0:2], extent[2:], scale_rank=config['plotting']['geography']['CityRankingFactor'], zorder=15)
 
 	region_name = region_name.replace(" ", "").upper()
