@@ -27,7 +27,7 @@ from paramiko import SSHClient
 from scp import SCPClient
 
 from plot import plot_region
-import contrail_calc
+import contrail_calc as cc
 
 PATH_TO_LOGCFG = "config/logging.conf"
 
@@ -40,6 +40,7 @@ log = logging.getLogger("main")
 def _plot_mp_worker(save_dir: str,
                     product_info: dict,
 				    config: dict,
+				    model_config: dict,
 				    file_and_pos: tuple):
 
 	log.debug("Spinning up minimum heights worker process...")
@@ -54,8 +55,14 @@ def _plot_mp_worker(save_dir: str,
 	sel_func = product_info['calcfunc']
 
 	#dynamic selection of calculation function based on config
-	calc_func = getattr(contrail_calc, sel_func)
-	result = calc_func(file)
+	try:
+		calc_func = getattr(cc, sel_func)
+		result = calc_func(file, model_config)
+	except Exception as e:
+		log.fatal(f"Unable to calculate heights.")
+		log.fatal(f"Reason: {e}")
+
+	cc.save_results_to_file(result, file.replace('data', 'output').replace('grib2', 'json'))
 
 	failed_regions = []
 	prog = trange(len(regions_to_plot), position=pos, miniters=0, total=len(regions_to_plot), leave=None)
@@ -182,7 +189,7 @@ class ContrailProcessor:
 			hours_from_start = round((time.to_timestamp(freq="H") - 
 									  start_time.tz_localize(tz=None)).total_seconds() / 3600)
 
-			fcst_hr = str(hours_from_start).zfill(3)
+			fcst_hr = str(hours_from_start).zfill(2)
 			product = ""
 
 			log.debug(f"File params: y={year} m={month} d={day} hr={hour} fcst={hours_from_start}")
@@ -288,9 +295,12 @@ class ContrailProcessor:
 		archive_file = os.path.join(archive_dir, archive_name)
 
 		with tarfile.open(archive_file, "w:gz") as tar:
-			tar.add(self.plot_dir, arcname=(os.path.basename(self.plot_dir)))
+			tar.add(self.plot_dir, 
+			        arcname=(os.path.basename(self.plot_dir)))
+
 			if include_data:
-				tar.add(self.data_dir, arcname=(os.path.join("data", os.path.basename(self.data_dir))))
+				tar.add(self.data_dir, 
+				        arcname=(os.path.join("data", os.path.basename(self.data_dir))))
 
 	def _init_ssh_connection(self):
 		log.info("Initiating SSH connection to server")
@@ -453,8 +463,11 @@ class ContrailProcessor:
 		out_dir = os.path.join(self.plot_dir, sel_product['dirname'])
 		
 		tqdm.set_lock(RLock())
-		p = Pool(initializer=tqdm.set_lock, initargs=(tqdm.get_lock(),))
-		p.map(partial(_plot_mp_worker, out_dir, sel_product, self.config), zip(self.data_files, range(1, len(self.data_files)+1, 1)))
+		p = Pool(initializer=tqdm.set_lock, 
+		         initargs=(tqdm.get_lock(),))
+		
+		p.map(partial(_plot_mp_worker, out_dir, sel_product, self.config, self.sel_model), 
+		       zip(self.data_files, range(1, len(self.data_files)+1, 1)))
 
 	
 

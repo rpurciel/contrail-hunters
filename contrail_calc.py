@@ -3,6 +3,7 @@ import tomllib
 import datetime
 import logging
 from collections import namedtuple
+import json
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -20,7 +21,26 @@ with open(os.path.join(os.getcwd(), PATH_TO_LOGCFG), 'rb') as log_cfg:
 global log
 log = logging.getLogger("main.calc")
 
-def calculate_min_contrail_heights_hb(data_file):
+def save_results_to_file(results: namedtuple,
+                         path: str):
+
+	results_d = results._asdict()
+
+	results_d['contrail_heights'] = results_d['contrail_heights'].tolist()
+	results_d['lat'] = results_d['lat'].tolist()
+	results_d['lon'] = results_d['lon'].tolist()
+	results_d['init_time'] = results_d['init_time'].strftime("%y-%m-%d %H:%M:%S.%f")
+	results_d['valid_time'] = results_d['valid_time'].strftime("%y-%m-%d %H:%M:%S.%f")
+	# results_d['fcst_hr'] = results_d['fcst_hr'].tolist()
+
+
+	with open(path, 'w') as jsonfile:
+		json.dump(results_d, 
+		          jsonfile,
+		          indent=2)
+
+def calculate_min_contrail_heights_hb(data_file: str,
+                                      model_config: dict) -> namedtuple:
 
 	now = pd.Timestamp.now(tz='UTC')
 	log.info(f"Starting file parsing routine at {now} UTC")
@@ -43,16 +63,33 @@ def calculate_min_contrail_heights_hb(data_file):
 	init_time = pd.to_datetime(data.time.data)
 	dt_obj = pd.to_datetime(np_dt_obj)
 
+	if model_config['id'] == "hrrr":
+		longitude = longitude - 360
+
 	fcst_hr = round((dt_obj - init_time).total_seconds() / 3600)
 	dt_str = str(dt_obj)
 	
 	log.info(f"Parsing time {dt_str}")
 	
-	# Pressure, temp, height, RH, specific humidity data
-	press = data.isobaricInhPa.data
-	tmp = data.t.data-273.15 #Kelvin to degC
-	hgt = data.gh.data*3.28084 # GPM meters to feet
-	rh = data.r.data
+	vtable = model_config['vtable']
+	vtable_units = model_config['vtable_units']
+
+	press = data[vtable['prss']].data
+	tmp = data[vtable['temp']].data
+	hgt = data[vtable['gpot']].data
+	rh = data[vtable['relh']].data
+
+	if vtable_units['temp'] == "K":
+		tmp = tmp - 273.15 #K to degC
+
+	if vtable_units['gpot'] == "gpm":
+		hgt = hgt * 3.28084 #Geopotential Meters to feet
+
+	# # Pressure, temp, height, RH, specific humidity data
+	# press = data.isobaricInhPa.data
+	# tmp = data.t.data-273.15 #Kelvin to degC
+	# hgt = data.gh.data*3.28084 # GPM meters to feet
+	# rh = data.r.data
 	# Calc specific humidity from RH
 	tmp2 = tmp * units.degC
 	rh2 = rh * units.percent
@@ -170,9 +207,10 @@ def calculate_min_contrail_heights_hb(data_file):
 
 	Calculation = namedtuple('Calculation', ['contrail_heights', 'lat', 'lon', 'init_time', 'valid_time', 'fcst_hr'])
 
-	return Calculation(contrail_heights=hgt_contrail, lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
+	return Calculation(contrail_heights=hgt_contrail[::3][::3], lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
 
-def calculate_min_contrail_heights_lb(data_file):
+def calculate_min_contrail_heights_lb(data_file: str,
+                                      model_config: dict) -> namedtuple:
 
 	now = pd.Timestamp.now(tz='UTC')
 	log.info(f"Starting file parsing routine at {now} UTC")
@@ -195,16 +233,33 @@ def calculate_min_contrail_heights_lb(data_file):
 	init_time = pd.to_datetime(data.time.data)
 	dt_obj = pd.to_datetime(np_dt_obj)
 
+	if model_config['id'] == "hrrr":
+		longitude = longitude - 360
+
 	fcst_hr = round((dt_obj - init_time).total_seconds() / 3600)
 	dt_str = str(dt_obj)
 	
 	log.info(f"Parsing time {dt_str}")
 	
+	vtable = model_config['vtable']
+	vtable_units = model_config['vtable_units']
+
+	press = data[vtable['prss']].data
+	tmp = data[vtable['temp']].data
+	hgt = data[vtable['gpot']].data
+	rh = data[vtable['relh']].data
+
+	if vtable_units['temp'] == "K":
+		tmp = tmp - 273.15 #K to degC
+
+	if vtable_units['gpot'] == "gpm":
+		hgt = hgt * 3.28084 #Geopotential Meters to feet
+
 	# Pressure, temp, height, RH, specific humidity data
-	press = data.isobaricInhPa.data
-	tmp = data.t.data-273.15 #Kelvin to degC
-	hgt = data.gh.data*3.28084 # GPM meters to feet
-	rh = data.r.data
+	# press = data.isobaricInhPa.data
+	# tmp = data.t.data-273.15 #Kelvin to degC
+	# hgt = data.gh.data*3.28084 # GPM meters to feet
+	# rh = data.r.data
 	# Calc specific humidity from RH
 	tmp2 = tmp * units.degC
 	rh2 = rh * units.percent
@@ -322,9 +377,10 @@ def calculate_min_contrail_heights_lb(data_file):
 
 	Calculation = namedtuple('Calculation', ['contrail_heights', 'lat', 'lon', 'init_time', 'valid_time', 'fcst_hr'])
 
-	return Calculation(contrail_heights=hgt_contrail, lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
+	return Calculation(contrail_heights=hgt_contrail[::3][::3], lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
 
-def calculate_min_contrail_heights_nb(data_file):
+def calculate_min_contrail_heights_nb(data_file: str,
+                                      model_config: dict) -> namedtuple:
 
 	now = pd.Timestamp.now(tz='UTC')
 	log.info(f"Starting file parsing routine at {now} UTC")
@@ -347,16 +403,33 @@ def calculate_min_contrail_heights_nb(data_file):
 	init_time = pd.to_datetime(data.time.data)
 	dt_obj = pd.to_datetime(np_dt_obj)
 
+	if model_config['id'] == "hrrr":
+		longitude = longitude - 360
+
 	fcst_hr = round((dt_obj - init_time).total_seconds() / 3600)
 	dt_str = str(dt_obj)
 	
 	log.info(f"Parsing time {dt_str}")
+
+	vtable = model_config['vtable']
+	vtable_units = model_config['vtable_units']
+
+	press = data[vtable['prss']].data
+	tmp = data[vtable['temp']].data
+	hgt = data[vtable['gpot']].data
+	rh = data[vtable['relh']].data
+
+	if vtable_units['temp'] == "K":
+		tmp = tmp - 273.15 #K to degC
+
+	if vtable_units['gpot'] == "gpm":
+		hgt = hgt * 3.28084 #Geopotential Meters to feet
 	
-	# Pressure, temp, height, RH, specific humidity data
-	press = data.isobaricInhPa.data
-	tmp = data.t.data-273.15 #Kelvin to degC
-	hgt = data.gh.data*3.28084 # GPM meters to feet
-	rh = data.r.data
+	# # Pressure, temp, height, RH, specific humidity data
+	# press = data.isobaricInhPa.data
+	# tmp = data.t.data-273.15 #Kelvin to degC
+	# hgt = data.gh.data*3.28084 # GPM meters to feet
+	# rh = data.r.data
 	# Calc specific humidity from RH
 	tmp2 = tmp * units.degC
 	rh2 = rh * units.percent
@@ -473,4 +546,4 @@ def calculate_min_contrail_heights_nb(data_file):
 
 	Calculation = namedtuple('Calculation', ['contrail_heights', 'lat', 'lon', 'init_time', 'valid_time', 'fcst_hr'])
 
-	return Calculation(contrail_heights=hgt_contrail, lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
+	return Calculation(contrail_heights=hgt_contrail[::3][::3], lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)

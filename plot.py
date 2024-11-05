@@ -12,7 +12,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib import cm
-from matplotlib.colors import from_levels_and_colors, to_rgba
+from matplotlib.colors import from_levels_and_colors, to_rgba, ListedColormap
 import matplotlib.patheffects as PathEffects
 import cartopy
 import cartopy.crs as crs
@@ -61,6 +61,8 @@ def plot_region(save_dir: str,
 	
 	Region = _dynamic_region_selector(region_id, region_info)
 
+	log.debug(f"Selected region {Region.name}")
+
 	extent = Region.extent
 	proj = Region.proj
 	region_name = Region.name
@@ -76,17 +78,22 @@ def plot_region(save_dir: str,
 		vmin = config['plotting']['units']['mMinLevel']
 		vmax = config['plotting']['units']['mMaxLevel']
 	else: #feet, default unit
+		# if config['plotting']['units']['UseCustomRange']:
 		levels = config['plotting']['units']['ftLevels']
 		vmin = config['plotting']['units']['ftMinLevel']
 		vmax = config['plotting']['units']['ftMaxLevel']
 
+
 	#palette = copy(plt.get_cmap("Set1")) #Copying the color map to modify it
 
-	palette, palette_norm = from_levels_and_colors(levels, tuple(config['plotting']['colors']['ColorPallete']))
+	if config['plotting']['colors']['UseCustomColormap']:
+		palette = ListedColormap(tuple(config['plotting']['colors']['CustomColormapColors']))
+		# palette, palette_norm = from_levels_and_colors(levels, tuple(config['plotting']['colors']['CustomColormapColors']))
+		# palette.set_under(config['plotting']['colors']['BelowMinHeightColor']) #Creating White for anything below 15000
+		# palette.set_over(config['plotting']['colors']['AboveMaxHeightColor']) #Creating White for anything above 55000
+	else:
+		palette = config['plotting']['colors']['Colormap']
 
-	palette.set_under(config['plotting']['colors']['BelowMinHeightColor']) #Creating White for anything below 15000
-	palette.set_over(config['plotting']['colors']['AboveMaxHeightColor']) #Creating White for anything above 55000
-	# palette.set_bad('black')
 	
 	contrail_heights_plotted = ax.contourf(long, lat, 
 	                                       contrail_heights, 
@@ -105,15 +112,21 @@ def plot_region(save_dir: str,
 	# contrail_heights_plotted.changed()
 	
 	# Add lat/lon grids
-	gridlines = ax.gridlines(linewidth=.8, linestyle='--', 
-							color='gray', alpha=.5, draw_labels=True, 
-							x_inline=False, y_inline=False, zorder=11)
+	gridlines = ax.gridlines(linewidth=.8, 
+	                         linestyle='--', 
+							 color='gray', 
+							 alpha=.5, 
+							 draw_labels=True, 
+							 x_inline=False, 
+							 y_inline=False, 
+							 zorder=11)
+
 	gridlines.xlabel_style = {'size': 7}
 	gridlines.ylabel_style = {'size': 7}
 	gridlines.xlines = True
 	gridlines.ylines = True
-	gridlines.top_labels = False 
-	gridlines.right_labels = False 
+	gridlines.xlabels_top = False 
+	gridlines.ylabels_right = False 
 
 	xmin, xmax = ax.get_xlim()
 	ymin, ymax = ax.get_ylim()
@@ -122,8 +135,37 @@ def plot_region(save_dir: str,
 	height = ymax - ymin
 
 	# create the patch and place it in the back of countourf (zorder!)
-	p = patches.Rectangle(xy, width, height, hatch='x', fill=None, zorder=-10)
-	ax.add_patch(p)
+	hatch_none = patches.Rectangle(xy, 
+			                       width, 
+			                       height, 
+			                       hatch='x', 
+			                       fill=None, 
+			                       zorder=-10)
+	ax.add_patch(hatch_none)
+
+	xy_legend = (10.27, 1.5)#(1.01,0)
+	xy_legendlab = (23, 6)
+
+	hatch_legend = patches.Rectangle(xy_legend, 
+	                                 width=0.25, 
+	                                 height=0.25, 
+	                                 hatch="x",
+	                                 edgecolor="black",
+	                                 facecolor="white",
+	                                 clip_on=False,
+	                                 transform=fig.dpi_scale_trans,#ax.transAxes,
+	                                 zorder=35)
+	ax.add_patch(hatch_legend)
+
+	ax.annotate('No Contrails',
+	            xy_legend,
+	            xy_legendlab,
+	            xycoords=fig.dpi_scale_trans,#'axes fraction',
+	            textcoords='offset points',
+	            annotation_clip=False,
+	            transform=fig.dpi_scale_trans,#ax.transAxes,
+	            fontsize=9,
+	            zorder=35)
 
 	if config['plotting']['geography']['Visible']:
 		if config['plotting']['geography']['DrawStates']:
@@ -144,27 +186,38 @@ def plot_region(save_dir: str,
 	ttl_init_str = init_time.strftime("%H:00 UTC %b %d %Y")
 	fcasthr = str(fcst_hr)
 	ttl_valid_str = valid_time.strftime("%H:00 UTC %b %d %Y")
-	plot_title = r"$\bf{"+"GFS\ Minimum\ Contrail\ Heights\ (ft\ &\ m\ MSL)"+"}$"+"\nInit: "+ttl_init_str+"   Forecast Hr: ["+fcasthr+"]   Valid: "+ttl_valid_str
-	ax.set_title(plot_title, loc='left', fontsize = 13)
-	ax.set_title(config['plotting']['Branding'] + "\n", color='gray', fontweight='bold', 
-				 fontsize=13, loc='right')
+	# plot_title = r"$\bf{"+"GFS\ Minimum\ Contrail\ Heights\ (ft\ &\ m\ MSL)"+"}$"+"\nInit: "+ttl_init_str+"   Forecast Hr: ["+fcasthr+"]   Valid: "+ttl_valid_str
+	plot_title = f'{product_info["model"].upper()} {product_info["longname"]}\n'
+	plot_desc = f'Initalized at {ttl_init_str}, Valid for {ttl_valid_str} (Forecast Hour {fcasthr})'
+	ax.set_title(plot_title, 
+	             loc='center', 
+	             fontsize = 16, 
+	             fontweight='bold')
+	ax.set_title(plot_desc, 
+	             loc='left', 
+	             fontsize=11)
+	ax.set_title(config['plotting']['Branding'], 
+	             color='gray', 
+	             fontweight='bold', 
+				 fontsize=11, 
+				 loc='right')
 
 	if config['plotting']['colors']['colorbar']['Visible']:
 		if config['plotting']['colors']['colorbar']['Location'] == 'inside':
 			cb = fig.colorbar(contrail_heights_plotted, orientation = "horizontal", shrink=config['plotting']['colors']['colorbar']['ShrinkFactor'], aspect=22, 
-							  pad=-.15, extendfrac=.02, format=config['plotting']['colors']['colorbar']['TickLabelFormat'])
+							  pad=-.15, extendfrac=.05, format=config['plotting']['colors']['colorbar']['TickLabelFormat'])
 			log.debug("Drawing colorbar turned ON")
 			log.debug("Location = Inside plot")
 			log.debug(f"Tick Label Format = '{config['plotting']['colors']['colorbar']['TickLabelFormat']}'")
 		if config['plotting']['colors']['colorbar']['Location'] == 'bottom':
 			cb = fig.colorbar(contrail_heights_plotted, orientation = "horizontal", shrink=config['plotting']['colors']['colorbar']['ShrinkFactor'], aspect=22, 
-							  pad=.01, extendfrac=.02, format=config['plotting']['colors']['colorbar']['TickLabelFormat'])
+							  pad=.01, extendfrac=.05, format=config['plotting']['colors']['colorbar']['TickLabelFormat'])
 			log.debug("Drawing colorbar turned ON")
 			log.debug("Location = Bottom of plot")
 			log.debug(f"Tick Label Format = '{config['plotting']['colors']['colorbar']['TickLabelFormat']}'")
 		if config['plotting']['colors']['colorbar']['Location'] == 'right':
 			cb = fig.colorbar(contrail_heights_plotted, orientation = "vertical", shrink=config['plotting']['colors']['colorbar']['ShrinkFactor'], aspect=22, 
-							  pad=.01, extendfrac=.02, format=config['plotting']['colors']['colorbar']['TickLabelFormat'])
+							  pad=.01, extendfrac=.05, format=config['plotting']['colors']['colorbar']['TickLabelFormat'])
 			log.debug("Drawing colorbar turned ON")
 			log.debug("Location = Left of plot")
 			log.debug(f"Tick Label Format = '{config['plotting']['colors']['colorbar']['TickLabelFormat']}'")
@@ -218,6 +271,8 @@ def plot_region(save_dir: str,
 	log.info(f"Done with plotting routine for region {region_name}, took {tot_time.total_seconds()} sec.")
 
 def _dynamic_region_selector(sel_id, region_cfg):
+
+	log.debug(f"Selecting region")
 	regions = region_cfg['regions']
 
 	sel_region = {}
@@ -248,6 +303,8 @@ def _dynamic_region_selector(sel_id, region_cfg):
 		sel_proj = crs.PlateCarree()
 
 	Region = namedtuple('Region', ['id', 'name', 'extent', 'proj'])
+
+	log.debug(f"Region selected")
 
 	return Region(id=reg_id, name=reg_name, extent=reg_bbox, proj=sel_proj)
 

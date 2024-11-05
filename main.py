@@ -21,12 +21,32 @@ global log
 log = logging.getLogger("main")
 
 parser = argparse.ArgumentParser(description=f'Run CONTRAIL HUNTERS v. {VERSION}')
-parser.add_argument('--load-static-data', help='load files from data directory instead of downloading', action='store_true', dest='static')
-parser.add_argument('--local-only', help='run program locally, do not connect to destination server', action='store_true', dest='local')
-parser.add_argument('--clean-data-before-run', help='remove old data at the beginning of processing', action='store_true', dest='clean_data')
-parser.add_argument('--clean-plots-before-run', help='remove old plots at the beginning of processing', action='store_true', dest='clean_plots')
-parser.add_argument('--keep-data-after-run', help='prevent deletion of data files from directory when done processing', action='store_true', dest='keep_data')
-parser.add_argument('--time', help='specifiy a time (UTC) to start the forecast period from', nargs=4, default=argparse.SUPPRESS, metavar=('yyyy', 'mm', 'dd', 'hh'), type=int)
+parser.add_argument('--load-static-data', 
+                    help='load files from data directory instead of downloading', 
+                    action='store_true', 
+                    dest='static')
+parser.add_argument('--local-only', 
+                    help='run program locally, do not connect to destination server', 
+                    action='store_true', 
+                    dest='local')
+parser.add_argument('--clean-data-before-run', 
+                    help='remove old data at the beginning of processing', 
+                    action='store_true', 
+                    dest='clean_data')
+parser.add_argument('--clean-plots-before-run', 
+                    help='remove old plots at the beginning of processing', 
+                    action='store_true', 
+                    dest='clean_plots')
+parser.add_argument('--keep-data-after-run', 
+                    help='prevent deletion of data files from directory when done processing', 
+                    action='store_true', 
+                    dest='keep_data')
+parser.add_argument('--time', 
+                    help='specifiy a time (UTC) to start the forecast period from', 
+                    nargs=4, 
+                    default=argparse.SUPPRESS, 
+                    metavar=('yyyy', 'mm', 'dd', 'hh'), 
+                    type=int)
 
 if __name__ == "__main__":
 
@@ -58,7 +78,11 @@ if __name__ == "__main__":
 		proc.clean_dir('data')
 		
 	if 'time' in args:
-		time = pd.Timestamp(year=int(args.time[0]), month=int(args.time[1]), day=int(args.time[2]), hour=int(args.time[3]), tz='UTC')
+		time = pd.Timestamp(year=int(args.time[0]), 
+		                    month=int(args.time[1]), 
+		                    day=int(args.time[2]), 
+		                    hour=int(args.time[3]), 
+		                    tz='UTC')
 		proc.populate_keys(time)
 	else:
 		proc.populate_keys()
@@ -92,6 +116,6 @@ if __name__ == "__main__":
 	if not args.keep_data and not args.static:
 		proc.clean_dir('data')
 		proc.clean_dir('output')
-		
+
 	log.info("END")
 
