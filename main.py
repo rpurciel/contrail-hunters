@@ -8,7 +8,7 @@ import pandas as pd
 
 from processor import ContrailProcessor
 
-VERSION = "01.24.09"
+VERSION = "02.24.11"
 #(version in year).(year).(month)_(dev version #)
 
 PATH_TO_CONFIG = "config/config.conf"

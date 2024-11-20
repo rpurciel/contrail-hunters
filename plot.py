@@ -83,14 +83,8 @@ def plot_region(save_dir: str,
 		vmin = config['plotting']['units']['ftMinLevel']
 		vmax = config['plotting']['units']['ftMaxLevel']
 
-
-	#palette = copy(plt.get_cmap("Set1")) #Copying the color map to modify it
-
 	if config['plotting']['colors']['UseCustomColormap']:
 		palette = ListedColormap(tuple(config['plotting']['colors']['CustomColormapColors']))
-		# palette, palette_norm = from_levels_and_colors(levels, tuple(config['plotting']['colors']['CustomColormapColors']))
-		# palette.set_under(config['plotting']['colors']['BelowMinHeightColor']) #Creating White for anything below 15000
-		# palette.set_over(config['plotting']['colors']['AboveMaxHeightColor']) #Creating White for anything above 55000
 	else:
 		palette = config['plotting']['colors']['Colormap']
 
@@ -106,10 +100,6 @@ def plot_region(save_dir: str,
 										   transform=ccrs.PlateCarree(),
 										   transform_first = True,
 										   zorder=1)
-
-	# ax.set_facecolor(config['plotting']['colors']['BelowMinHeightColor'])
-
-	# contrail_heights_plotted.changed()
 	
 	# Add lat/lon grids
 	gridlines = ax.gridlines(linewidth=.8, 
@@ -226,20 +216,6 @@ def plot_region(save_dir: str,
 			cb.set_label(config['plotting']['colors']['colorbar']['Label'])
 			log.debug("Colorbar label turned ON")
 			log.debug(f"Label = '{config['plotting']['colors']['colorbar']['Label']}'")
-	
-	# # Add logo to corner
-	# cwd = os.getcwd()
-	# ancillary_dir = os.path.join(cwd, config['misc']['AncillaryDirPath'])
-	# logo_sized = f"logo{config['plotting']['logo']['SizePix']}.png"
-	# logo = os.path.join(ancillary_dir, logo_sized)
-	# img = Image.open(logo)
-	# # ax.imshow(img, extent=(0.4, 0.6, 5, 5), zorder=15, alpha=cfg.DEF_LOGO_ALPHA)
-
-	# if region_id == 'US':
-	# 	proj_padding = 50
-	# else:
-	# 	proj_padding = 0
-	# fig.figimage(img, xo=ax.bbox.xmin + config['plotting']['logo']['MarginX'], yo=ax.bbox.ymin + (config['plotting']['logo']['MarginY'] + proj_padding), zorder=15, alpha=config['plotting']['logo']['Alpha'])
 
 	draw_logo(ax, f"logo{config['plotting']['logo']['SizePix']}.png", scale=5)
 	plot_towns(ax, extent[0:2], extent[2:], scale_rank=config['plotting']['geography']['CityRankingFactor'], zorder=15)

@@ -207,7 +207,7 @@ def calculate_min_contrail_heights_hb(data_file: str,
 
 	Calculation = namedtuple('Calculation', ['contrail_heights', 'lat', 'lon', 'init_time', 'valid_time', 'fcst_hr'])
 
-	return Calculation(contrail_heights=hgt_contrail[::3][::3], lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
+	return Calculation(contrail_heights=hgt_contrail, lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
 
 def calculate_min_contrail_heights_lb(data_file: str,
                                       model_config: dict) -> namedtuple:
@@ -377,7 +377,7 @@ def calculate_min_contrail_heights_lb(data_file: str,
 
 	Calculation = namedtuple('Calculation', ['contrail_heights', 'lat', 'lon', 'init_time', 'valid_time', 'fcst_hr'])
 
-	return Calculation(contrail_heights=hgt_contrail[::3][::3], lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
+	return Calculation(contrail_heights=hgt_contrail, lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
 
 def calculate_min_contrail_heights_nb(data_file: str,
                                       model_config: dict) -> namedtuple:
@@ -546,4 +546,9 @@ def calculate_min_contrail_heights_nb(data_file: str,
 
 	Calculation = namedtuple('Calculation', ['contrail_heights', 'lat', 'lon', 'init_time', 'valid_time', 'fcst_hr'])
 
-	return Calculation(contrail_heights=hgt_contrail[::3][::3], lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
+	return Calculation(contrail_heights=hgt_contrail, lat=latitude, lon=longitude, init_time=init_time, valid_time=dt_obj, fcst_hr=fcst_hr)
+
+
+
+
+
