@@ -62,7 +62,7 @@ def _plot_mp_worker(save_dir: str,
 		log.fatal(f"Unable to calculate heights.")
 		log.fatal(f"Reason: {e}")
 
-	cc.save_results_to_file(result, file.replace('data', 'output').replace('grib2', 'json'))
+	# cc.save_results_to_file(result, file.replace('data', 'output').replace('grib2', 'json'))
 
 	failed_regions = []
 	prog = trange(len(regions_to_plot), position=pos, miniters=0, total=len(regions_to_plot), leave=None)
